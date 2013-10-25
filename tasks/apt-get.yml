@@ -15,6 +15,7 @@
     - nautilus-dropbox
     - openjdk-7-jdk
     - tig
+    - vim
     - virtualbox
     - xclip
 
