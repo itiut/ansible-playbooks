@@ -39,3 +39,7 @@
     - pry-debugger
     - pry-doc
   when: ruby_installed|failed
+
+- name: "ruby | rbenv rehash"
+  shell: "{{ rbenv_env }} rbenv rehash"
+  when: ruby_installed|failed
