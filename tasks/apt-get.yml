@@ -1,0 +1,35 @@
+---
+- name: "apt-get | install packages"
+  apt: pkg={{ item }}
+  sudo: yes
+  with_items:
+    - byobu
+    - curl
+    - fcitx
+    - fcitx-mozc
+    - indicator-multiload
+    - nautilus-dropbox
+    - openjdk-7-jdk
+    - tig
+    - virtualbox
+    - xclip
+
+- name: "apt-get | purge packages"
+  apt: pkg={{ item }} state=absent purge=yes
+  sudo: yes
+  with_items:
+    - brasero-common
+    - empathy-common
+    - gnome-contacts
+    - indicator-messages
+    - rhythmbox-data
+    - thunderbird
+    - ubuntuone-client-data
+    - unity-webapps-common
+    - xul-ext-websites-integration
+    - aisleriot
+    - gnome-mahjongg
+    - gnome-mines
+    - gnome-sudoku
+    - gnomine
+

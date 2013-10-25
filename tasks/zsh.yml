@@ -1,0 +1,9 @@
+---
+- name: "zsh | apt-get install zsh"
+  apt: pkg=zsh
+  sudo: yes
+
+- name: "zsh | usermod -s /bin/zsh"
+  user: name={{ user }} shell=/bin/zsh
+  sudo: yes
+

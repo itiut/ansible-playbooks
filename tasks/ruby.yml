@@ -1,0 +1,42 @@
+---
+- name: "ruby | install packages dependent to ruby-build"
+  apt: pkg={{ item }}
+  sudo: yes
+  with_items:
+    - build-essential
+    - git
+    - libreadline-dev
+    - libssl-dev
+
+- name: "ruby | update rbenv repository"
+  git: repo=git://github.com/sstephenson/rbenv.git dest={{ rbenv_root }}
+
+- name: "ruby | update ruby-build repository"
+  git: repo=git://github.com/sstephenson/ruby-build.git dest={{ rbenv_root }}/plugins/ruby-build
+
+- name: "ruby | check if ruby {{ ruby_version }} is installed"
+  shell: "{{ rbenv_env }} rbenv versions | grep {{ ruby_version }}"
+  register: ruby_installed
+  ignore_errors: true
+
+- name: "ruby | rbenv install {{ ruby_version }}"
+  shell: "{{ rbenv_env }} rbenv install {{ ruby_version }}"
+  when: ruby_installed|failed
+
+- name: "ruby | rbenv rehash"
+  shell: "{{ rbenv_env }} rbenv rehash"
+  when: ruby_installed|failed
+
+- name: "ruby | rbenv global {{ ruby_version }}"
+  shell: "{{ rbenv_env }} rbenv global {{ ruby_version }}"
+  when: ruby_installed|failed
+
+- name: "ruby | gem install packages"
+  shell: "{{ rbenv_env }} gem install {{ item }}"
+  with_items:
+    - bundler
+    - pry
+    - pry-debugger
+    - pry-doc
+  when: ruby_installed|failed
+
