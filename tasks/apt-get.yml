@@ -1,4 +1,8 @@
 ---
+- name: "apt-get | add-apt-repository ppa:japanese-testers/ppa"
+  apt_repository: repo='ppa:japanese-testers/ppa'
+  sudo: yes
+
 - name: "apt-get | install packages"
   apt: pkg={{ item }}
   sudo: yes
