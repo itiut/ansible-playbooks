@@ -15,4 +15,3 @@
          | sed 's/^\(Exec=\)\(\/usr\/bin\/emacs24\)/\1env LANG=ja_JP.UTF-8 \2/'
          > {{ home }}/.local/share/applications/emacs24.desktop
          creates={{ home }}/.local/share/applications/emacs24.desktop
-

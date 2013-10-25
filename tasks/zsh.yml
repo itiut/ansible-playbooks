@@ -6,4 +6,3 @@
 - name: "zsh | usermod -s /bin/zsh"
   user: name={{ user }} shell=/bin/zsh
   sudo: yes
-
