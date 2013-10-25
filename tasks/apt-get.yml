@@ -12,6 +12,7 @@
     - fcitx
     - fcitx-mozc
     - indicator-multiload
+    - libappindicator1
     - nautilus-dropbox
     - openjdk-7-jdk
     - tig
