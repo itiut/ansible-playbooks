@@ -11,6 +11,7 @@
     - curl
     - fcitx
     - fcitx-mozc
+    - icedtea-netx
     - indicator-multiload
     - libappindicator1
     - nautilus-dropbox
