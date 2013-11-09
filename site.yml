@@ -7,12 +7,13 @@
     home: /home/{{ user }}
 
   vars_files:
-    - vars/ruby.yml
     - vars/vagrant.yml
+
+  roles:
+    - role: ruby
 
   tasks:
     - include: tasks/apt-get.yml
     - include: tasks/emacs.yml
-    - include: tasks/ruby.yml
     - include: tasks/vagrant.yml
     - include: tasks/zsh.yml
