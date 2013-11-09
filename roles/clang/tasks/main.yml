@@ -1,10 +1,10 @@
 ---
-- name: "apt-get install clang"
+- name: "clang | apt-get install clang"
   apt: pkg={{ item }}
   with_items:
     - clang
     - libclang-dev
 
-- name: "copy conf file for ldconfig"
+- name: "clang | copy conf file for ldconfig"
   copy: src=llvm.conf dest=/etc/ld.so.conf.d/llvm.conf owner=root group=root
   notify: ldconfig
