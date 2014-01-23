@@ -1,0 +1,11 @@
+---
+- hosts: 127.0.0.1
+  user: itiut
+
+  vars:
+    user: itiut
+    home: /home/{{ user }}
+
+  roles:
+    - role: cui
+    - role: ruby
