@@ -1,21 +1,21 @@
 ---
-- name: "vagrant | check if vagrant is installed"
+- name: "check if vagrant is installed"
   shell: which vagrant
   register: vagrant_installed
   ignore_errors: yes
 
-- name: "vagrant | extract download url from web page"
+- name: "extract download url from web page"
   shell: wget -qO - http://downloads.vagrantup.com/tags/v{{ vagrant_version }}
          | grep vagrant_{{ vagrant_version }}_x86_64.deb
          | sed 's/^.*href="\(.*\)".*$/\1/'
   register: vagrant_download_url
   when: vagrant_installed|failed
 
-- name: "vagrant | download vagrant_{{ vagrant_version }}_x86_64.deb"
+- name: "download vagrant_{{ vagrant_version }}_x86_64.deb"
   get_url: url={{ vagrant_download_url.stdout }} dest=/tmp/vagrant_{{ vagrant_version }}_x86_64.deb
   when: vagrant_installed|failed
 
-- name: "vagrant | dpkg -i vagrant_{{ vagrant_version }}_x86_64.deb"
+- name: "dpkg -i vagrant_{{ vagrant_version }}_x86_64.deb"
   shell: dpkg -i /tmp/vagrant_{{ vagrant_version }}_x86_64.deb
   sudo: yes
   when: vagrant_installed|failed
