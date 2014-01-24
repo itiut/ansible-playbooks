@@ -17,24 +17,24 @@
   git: repo=git://github.com/sstephenson/ruby-build.git dest={{ rbenv_root }}/plugins/ruby-build
 
 - name: "check if ruby {{ ruby_version }} is installed"
-  shell: "{{ rbenv_env }} rbenv versions | grep {{ ruby_version }}"
+  shell: "{{ rbenv_executable }} versions | grep {{ ruby_version }}"
   register: ruby_installed
   ignore_errors: true
 
 - name: "rbenv install {{ ruby_version }}"
-  shell: "{{ rbenv_env }} rbenv install {{ ruby_version }}"
+  shell: "{{ rbenv_executable }} install {{ ruby_version }}"
   when: ruby_installed|failed
 
 - name: "rbenv rehash"
-  shell: "{{ rbenv_env }} rbenv rehash"
+  shell: "{{ rbenv_executable }} rehash"
   when: ruby_installed|failed
 
 - name: "rbenv global {{ ruby_version }}"
-  shell: "{{ rbenv_env }} rbenv global {{ ruby_version }}"
+  shell: "{{ rbenv_executable }} global {{ ruby_version }}"
   when: ruby_installed|failed
 
 - name: "gem install packages"
-  shell: "{{ rbenv_env }} gem install {{ item }}"
+  gem: name={{ item }} executable={{ gem_executable }}
   with_items:
     - bundler
     - pry
@@ -43,5 +43,5 @@
   when: ruby_installed|failed
 
 - name: "rbenv rehash"
-  shell: "{{ rbenv_env }} rbenv rehash"
+  shell: "{{ rbenv_executable }} rehash"
   when: ruby_installed|failed

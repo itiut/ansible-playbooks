@@ -1,4 +1,5 @@
 ---
 ruby_version: 2.1.0
 rbenv_root: "{{ home }}/.rbenv"
-rbenv_env: PATH={{ rbenv_root }}/shims:{{ rbenv_root }}/bin:$PATH
+rbenv_executable: "{{ rbenv_root }}/bin/rbenv"
+gem_executable: "{{ rbenv_root }}/shims/gem"
