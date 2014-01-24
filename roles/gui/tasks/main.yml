@@ -8,5 +8,6 @@
   sudo: yes
   with_items:
     - emacs24
+    - nautilus-dropbox
     - openjdk-7-jdk
     - xclip
