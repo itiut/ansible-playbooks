@@ -8,5 +8,5 @@
   sudo: yes
   with_items:
     - emacs24
-    - indicator-multiload
     - openjdk-7-jdk
+    - xclip
