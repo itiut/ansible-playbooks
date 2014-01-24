@@ -1,0 +1,12 @@
+---
+- name: "add-apt-repository ppa:cassou/emacs"
+  apt_repository: repo='ppa:cassou/emacs'
+  sudo: yes
+
+- name: "install packages"
+  apt: pkg={{ item }}
+  sudo: yes
+  with_items:
+    - emacs24
+    - indicator-multiload
+    - openjdk-7-jdk

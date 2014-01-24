@@ -8,4 +8,5 @@
 
   roles:
     - role: cui
+    - role: gui
     - role: ruby
