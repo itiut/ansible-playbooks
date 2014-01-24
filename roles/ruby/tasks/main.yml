@@ -34,14 +34,14 @@
   when: ruby_installed|failed
 
 - name: "gem install packages"
-  gem: name={{ item }} executable={{ gem_executable }}
+  gem: name={{ item }} state=present executable={{ gem_executable }}
   with_items:
     - bundler
     - pry
     - pry-debugger
     - pry-doc
-  when: ruby_installed|failed
+  register: gem_install
 
 - name: "rbenv rehash"
   shell: "{{ rbenv_executable }} rehash"
-  when: ruby_installed|failed
+  when: gem_install.changed
