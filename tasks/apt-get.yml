@@ -7,8 +7,6 @@
   apt: pkg={{ item }}
   sudo: yes
   with_items:
-    - byobu
-    - curl
     - fcitx
     - fcitx-mozc
     - icedtea-netx
@@ -16,8 +14,6 @@
     - libappindicator1
     - nautilus-dropbox
     - openjdk-7-jdk
-    - tig
-    - vim
     - virtualbox
     - xclip
 

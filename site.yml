@@ -7,10 +7,10 @@
     home: /home/{{ user }}
 
   roles:
+    - role: cui
     - role: ruby
     - role: vagrant
 
   tasks:
     - include: tasks/apt-get.yml
     - include: tasks/emacs.yml
-    - include: tasks/zsh.yml
