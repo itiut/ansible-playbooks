@@ -36,12 +36,10 @@
 - name: "gem install packages"
   gem: name={{ item }} state=present executable={{ gem_executable }}
   with_items:
+    - rbenv-rehash
     - bundler
     - pry
     - pry-debugger
     - pry-doc
-  register: gem_install
-
-- name: "rbenv rehash"
-  shell: "{{ rbenv_executable }} rehash"
-  when: gem_install.changed
+    - rubocop
+    - ruby-lint
