@@ -10,36 +10,32 @@
     - libxml2-dev
     - libxslt1-dev
 
-- name: "update rbenv repository"
+- name: "rbenv repository"
   git: repo=git://github.com/sstephenson/rbenv.git dest={{ rbenv_root }}
 
-- name: "update ruby-build repository"
+- name: "ruby-build repository"
   git: repo=git://github.com/sstephenson/ruby-build.git dest={{ rbenv_root }}/plugins/ruby-build
 
+- name: "rbenv-default-gems repository"
+  git: repo=git://github.com/sstephenson/rbenv-default-gems.git dest={{ rbenv_root }}/plugins/rbenv-default-gems
+
+- name: "copy default-gems to {{ rbenv_root }}"
+  copy: src=default-gems dest={{ rbenv_root }}/default-gems
+
 - name: "check if ruby {{ ruby_version }} is installed"
-  shell: "{{ rbenv_executable }} versions | grep {{ ruby_version }}"
+  shell: "{{ rbenv_env }} rbenv versions | grep {{ ruby_version }}"
   register: ruby_installed
   ignore_errors: true
 
 - name: "rbenv install {{ ruby_version }}"
-  shell: "{{ rbenv_executable }} install {{ ruby_version }}"
+  shell: "{{ rbenv_env }} rbenv install {{ ruby_version }}"
   when: ruby_installed|failed
 
 - name: "rbenv rehash"
-  shell: "{{ rbenv_executable }} rehash"
+  shell: "{{ rbenv_env }} rbenv rehash"
   when: ruby_installed|failed
 
 - name: "rbenv global {{ ruby_version }}"
-  shell: "{{ rbenv_executable }} global {{ ruby_version }}"
+  shell: "{{ rbenv_env }} rbenv global {{ ruby_version }}"
   when: ruby_installed|failed
 
-- name: "gem install packages"
-  gem: name={{ item }} state=present executable={{ gem_executable }}
-  with_items:
-    - rbenv-rehash
-    - bundler
-    - pry
-    - pry-debugger
-    - pry-doc
-    - rubocop
-    - ruby-lint

@@ -1,0 +1,6 @@
+bundler
+pry
+pry-debugger
+pry-doc
+rubocop
+ruby-lint
