@@ -39,3 +39,4 @@
   shell: "{{ rbenv_env }} rbenv global {{ ruby_version }}"
   when: ruby_installed|failed
 
+- include: hub.yml
