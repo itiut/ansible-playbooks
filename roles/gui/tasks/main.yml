@@ -1,9 +1,9 @@
 ---
-- name: "add-apt-repository ppa:cassou/emacs"
-  apt_repository: repo='ppa:cassou/emacs'
+- name: add-apt-repository ppa:cassou/emacs
+  apt_repository: repo=ppa:cassou/emacs
   sudo: yes
 
-- name: "install packages"
+- name: install packages
   apt: pkg={{ item }}
   sudo: yes
   with_items:

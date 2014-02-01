@@ -1,12 +1,12 @@
 ---
-- name: "hub repository"
+- name: hub repository
   git: repo=git://github.com/github/hub.git dest={{ hub_dir }}
   register: hub_repo
 
-- name: "bundle install in {{ hub_dir }}"
+- name: bundle install in {{ hub_dir }}
   shell: "{{ rbenv_env }} bundle install chdir={{ hub_dir }}"
   when: hub_repo.changed
 
-- name: "rake install hub"
+- name: rake install hub
   shell: "{{ rbenv_env }} PREFIX={{ local_dir }} bundle exec rake install chdir={{ hub_dir }}"
   when: hub_repo.changed

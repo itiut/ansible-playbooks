@@ -1,5 +1,5 @@
 ---
-- name: "install packages"
+- name: install packages
   apt: pkg={{ item }}
   sudo: yes
   with_items:
@@ -9,6 +9,6 @@
     - vim
     - zsh
 
-- name: "usermod --shell /bin/zsh"
+- name: usermod --shell /bin/zsh
   user: name={{ user }} shell=/bin/zsh
   sudo: yes
