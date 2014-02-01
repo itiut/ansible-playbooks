@@ -5,12 +5,26 @@
   vars:
     user: itiut
     home: /home/{{ user }}
+    local_dir: "{{ home }}/local"
+    src_dir: "{{ local_dir }}/src"
 
   roles:
     - role: cui
+    - role: gui
     - role: ruby
-    - role: vagrant
 
   tasks:
-    - include: tasks/apt-get.yml
-    - include: tasks/emacs.yml
+    - name: create group
+      group_by: key={{ ansible_env.DESKTOP_SESSION }}
+
+
+- hosts: ubuntu
+
+  # roles:
+  #   - role: vagrant
+
+  # tasks:
+  #   - include: tasks/apt-get.yml
+  #   - include: tasks/emacs.yml
+
+- hosts: xubuntu
