@@ -1,9 +1,9 @@
 ---
-- name: "apt-get | add-apt-repository ppa:japanese-testers/ppa"
-  apt_repository: repo='ppa:japanese-testers/ppa'
+- name: ubuntu | add-apt-repository ppa:japanese-testers/ppa
+  apt_repository: repo=ppa:japanese-testers/ppa
   sudo: yes
 
-- name: "apt-get | install packages"
+- name: ubuntu | install packages
   apt: pkg={{ item }}
   sudo: yes
   with_items:
@@ -14,7 +14,7 @@
     - libappindicator1
     - virtualbox
 
-- name: "apt-get | purge packages"
+- name: ubuntu | purge packages
   apt: pkg={{ item }} state=absent purge=yes
   sudo: yes
   with_items:

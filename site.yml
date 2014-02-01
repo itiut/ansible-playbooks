@@ -23,8 +23,8 @@
   # roles:
   #   - role: vagrant
 
-  # tasks:
-  #   - include: tasks/apt-get.yml
+  tasks:
+    - include: tasks/ubuntu.yml
   #   - include: tasks/emacs.yml
 
 - hosts: xubuntu
