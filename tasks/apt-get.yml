@@ -12,10 +12,7 @@
     - icedtea-netx
     - indicator-multiload
     - libappindicator1
-    - nautilus-dropbox
-    - openjdk-7-jdk
     - virtualbox
-    - xclip
 
 - name: "apt-get | purge packages"
   apt: pkg={{ item }} state=absent purge=yes
