@@ -1,0 +1,15 @@
+---
+- name: check if rbenv is installed
+  shell: anyenv envs | grep rbenv
+  register: rbenv_installed
+  ignore_errors: true
+
+- name: install rbenv via anyenv
+  shell: anyenv install rbenv
+  when: rbenv_installed|failed
+
+- name: rbenv repository
+  git: repo=git://github.com/sstephenson/rbenv.git dest={{ rbenv_root }}
+
+- name: ruby-build repository
+  git: repo=git://github.com/sstephenson/ruby-build.git dest={{ rbenv_root }}/plugins/ruby-build

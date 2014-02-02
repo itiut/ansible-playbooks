@@ -1,24 +1,8 @@
 ---
-- name: check if rbenv is installed
-  shell: anyenv envs | grep rbenv
-  register: rbenv_installed
-  ignore_errors: true
+- include: install-rbenv.yml
 
-- name: install rbenv via anyenv
-  shell: anyenv install rbenv
-  when: rbenv_installed|failed
-
-- name: rbenv repository
-  git: repo=git://github.com/sstephenson/rbenv.git dest={{ rbenv_root }}
-
-- name: ruby-build repository
-  git: repo=git://github.com/sstephenson/ruby-build.git dest={{ rbenv_root }}/plugins/ruby-build
-
-- name: rbenv-default-gems repository
-  git: repo=git://github.com/sstephenson/rbenv-default-gems.git dest={{ rbenv_root }}/plugins/rbenv-default-gems
-
-- name: copy default-gems to {{ rbenv_root }}
-  copy: src=default-gems dest={{ rbenv_root }}/default-gems
+- include: install-rbenv-plugins.yml
 
 - include: install-ruby.yml
+
 - include: hub.yml

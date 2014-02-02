@@ -1,0 +1,6 @@
+---
+- name: rbenv-default-gems repository
+  git: repo=git://github.com/sstephenson/rbenv-default-gems.git dest={{ rbenv_root }}/plugins/rbenv-default-gems
+
+- name: copy default-gems to {{ rbenv_root }}
+  copy: src=default-gems dest={{ rbenv_root }}/default-gems
