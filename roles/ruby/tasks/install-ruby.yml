@@ -1,0 +1,29 @@
+---
+- name: check if ruby {{ ruby_version }} is installed
+  shell: rbenv versions | grep {{ ruby_version }}
+  register: ruby_installed
+  ignore_errors: true
+
+- name: install packages dependent to ruby-build and some gems
+  apt: pkg={{ item }}
+  sudo: yes
+  with_items:
+    - build-essential
+    - git
+    - libreadline-dev
+    - libssl-dev
+    - libxml2-dev
+    - libxslt1-dev
+  when: ruby_installed|failed
+
+- name: rbenv install {{ ruby_version }}
+  shell: rbenv install {{ ruby_version }}
+  when: ruby_installed|failed
+
+- name: rbenv rehash
+  shell: rbenv rehash
+  when: ruby_installed|failed
+
+- name: rbenv global {{ ruby_version }}
+  shell: rbenv global {{ ruby_version }}
+  when: ruby_installed|failed
