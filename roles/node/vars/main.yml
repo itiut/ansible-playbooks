@@ -1,0 +1,3 @@
+---
+node_version: v0.10.25
+ndenv_root: "{{ anyenv_envs }}/ndenv"

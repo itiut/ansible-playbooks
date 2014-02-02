@@ -1,0 +1,15 @@
+---
+- name: check if ndenv is installed
+  shell: anyenv envs | grep ndenv
+  register: ndenv_installed
+  ignore_errors: true
+
+- name: install ndenv via anyenv
+  shell: anyenv install ndenv
+  when: ndenv_installed|failed
+
+- name: ndenv repository
+  git: repo=git://github.com/riywo/ndenv.git dest={{ ndenv_root }}
+
+- name: node-build repository
+  git: repo=git://github.com/riywo/node-build.git dest={{ ndenv_root }}/plugins/node-build
