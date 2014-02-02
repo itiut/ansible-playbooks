@@ -1,0 +1,9 @@
+---
+- name: anyenv repository
+  git: repo=git://github.com/riywo/anyenv.git dest={{ anyenv_root }}
+
+- name: copy anyenv init script
+  copy: src=anyenv.sh dest={{ home }}/.bashenv.anyenv
+
+- name: source anyenv init script in .bashenv
+  lineinfile: dest={{ home }}/.bashenv line="source .bashenv.anyenv" create=yes mode=0644
