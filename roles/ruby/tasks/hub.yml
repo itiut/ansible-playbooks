@@ -4,9 +4,9 @@
   register: hub_repo
 
 - name: bundle install in {{ hub_dir }}
-  shell: "{{ rbenv_env }} bundle install chdir={{ hub_dir }}"
-  when: hub_repo.changed
+  shell: bundle install chdir={{ hub_dir }}
+  when: hub_repo.changed or ruby_installed|failed
 
 - name: rake install hub
-  shell: "{{ rbenv_env }} PREFIX={{ local_dir }} bundle exec rake install chdir={{ hub_dir }}"
-  when: hub_repo.changed
+  shell: PREFIX={{ local_dir }} bundle exec rake install chdir={{ hub_dir }}
+  when: hub_repo.changed or ruby_installed|failed
