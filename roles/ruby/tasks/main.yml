@@ -10,6 +10,15 @@
     - libxml2-dev
     - libxslt1-dev
 
+- name: check if rbenv is installed
+  shell: anyenv envs | grep rbenv
+  register: rbenv_installed
+  ignore_errors: true
+
+- name: install rbenv via anyenv
+  shell: anyenv install rbenv
+  when: rbenv_installed|failed
+
 - name: rbenv repository
   git: repo=git://github.com/sstephenson/rbenv.git dest={{ rbenv_root }}
 
@@ -23,20 +32,20 @@
   copy: src=default-gems dest={{ rbenv_root }}/default-gems
 
 - name: check if ruby {{ ruby_version }} is installed
-  shell: "{{ rbenv_env }} rbenv versions | grep {{ ruby_version }}"
+  shell: rbenv versions | grep {{ ruby_version }}
   register: ruby_installed
   ignore_errors: true
 
 - name: rbenv install {{ ruby_version }}
-  shell: "{{ rbenv_env }} rbenv install {{ ruby_version }}"
+  shell: rbenv install {{ ruby_version }}
   when: ruby_installed|failed
 
 - name: rbenv rehash
-  shell: "{{ rbenv_env }} rbenv rehash"
+  shell: rbenv rehash
   when: ruby_installed|failed
 
 - name: rbenv global {{ ruby_version }}
-  shell: "{{ rbenv_env }} rbenv global {{ ruby_version }}"
+  shell: rbenv global {{ ruby_version }}
   when: ruby_installed|failed
 
 - include: hub.yml
