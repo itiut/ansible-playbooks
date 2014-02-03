@@ -1,17 +1,17 @@
 ---
 - name: check if node {{ node_version }} is installed
-  shell: ndenv versions | grep {{ node_version }}
+  shell: bash -lc "ndenv versions | grep {{ node_version }}"
   register: node_installed
   ignore_errors: true
 
 - name: ndenv install {{ node_version }}
-  shell: ndenv install {{ node_version }}
+  shell: bash -lc "ndenv install {{ node_version }}"
   when: node_installed|failed
 
 - name: ndenv rehash
-  shell: ndenv rehash
+  shell: bash -lc "ndenv rehash"
   when: node_installed|failed
 
 - name: ndenv global {{ node_version }}
-  shell: ndenv global {{ node_version }}
+  shell: bash -lc "ndenv global {{ node_version }}"
   when: node_installed|failed

@@ -1,11 +1,11 @@
 ---
 - name: check if ndenv is installed
-  shell: anyenv envs | grep ndenv
+  shell: bash -lc "anyenv envs | grep ndenv"
   register: ndenv_installed
   ignore_errors: true
 
 - name: install ndenv via anyenv
-  shell: anyenv install ndenv
+  shell: bash -lc "anyenv install ndenv"
   when: ndenv_installed|failed
 
 - name: ndenv repository

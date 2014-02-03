@@ -1,11 +1,11 @@
 ---
 - name: check if rbenv is installed
-  shell: anyenv envs | grep rbenv
+  shell: bash -lc "anyenv envs | grep rbenv"
   register: rbenv_installed
   ignore_errors: true
 
 - name: install rbenv via anyenv
-  shell: anyenv install rbenv
+  shell: bash -lc "anyenv install rbenv"
   when: rbenv_installed|failed
 
 - name: rbenv repository

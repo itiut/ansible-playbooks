@@ -1,6 +1,6 @@
 ---
 - name: check if ruby {{ ruby_version }} is installed
-  shell: rbenv versions | grep {{ ruby_version }}
+  shell: bash -lc "rbenv versions | grep {{ ruby_version }}"
   register: ruby_installed
   ignore_errors: true
 
@@ -17,13 +17,13 @@
   when: ruby_installed|failed
 
 - name: rbenv install {{ ruby_version }}
-  shell: rbenv install {{ ruby_version }}
+  shell: bash -lc "rbenv install {{ ruby_version }}"
   when: ruby_installed|failed
 
 - name: rbenv rehash
-  shell: rbenv rehash
+  shell: bash -lc "rbenv rehash"
   when: ruby_installed|failed
 
 - name: rbenv global {{ ruby_version }}
-  shell: rbenv global {{ ruby_version }}
+  shell: bash -lc "rbenv global {{ ruby_version }}"
   when: ruby_installed|failed
