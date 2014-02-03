@@ -6,4 +6,4 @@
   copy: src=anyenv.sh dest={{ home }}/.bash_profile.anyenv
 
 - name: source anyenv init script in .bash_profile
-  lineinfile: dest={{ home }}/.bash_profile line="source .bash_profile.anyenv" create=yes mode=0644
+  lineinfile: dest={{ home }}/.bash_profile line="source $HOME/.bash_profile.anyenv" create=yes mode=0644
