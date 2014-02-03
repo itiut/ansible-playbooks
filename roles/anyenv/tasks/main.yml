@@ -3,7 +3,7 @@
   git: repo=git://github.com/riywo/anyenv.git dest={{ anyenv_root }}
 
 - name: copy anyenv init script
-  copy: src=anyenv.sh dest={{ home }}/.bashenv.anyenv
+  copy: src=anyenv.sh dest={{ home }}/.bash_profile.anyenv
 
-- name: source anyenv init script in .bashenv
-  lineinfile: dest={{ home }}/.bashenv line="source .bashenv.anyenv" create=yes mode=0644
+- name: source anyenv init script in .bash_profile
+  lineinfile: dest={{ home }}/.bash_profile line="source .bash_profile.anyenv" create=yes mode=0644
