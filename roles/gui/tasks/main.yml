@@ -1,7 +1,11 @@
 ---
-- name: add-apt-repository ppa:cassou/emacs
-  apt_repository: repo=ppa:cassou/emacs
+- name: add apt repositories
+  apt_repository: repo={{ item }}
   sudo: yes
+  with_items:
+    - ppa:cassou/emacs
+    - ppa:ubuntu-sdk-team/ppa
+    - ppa:jerzy-kozera/zeal-ppa
 
 - name: install packages
   apt: pkg={{ item }}
@@ -11,3 +15,4 @@
     - nautilus-dropbox
     - openjdk-7-jdk
     - xclip
+    - zeal
