@@ -1,19 +1,19 @@
 ---
-- name: check if ruby {{ ruby_version }} is installed
-  shell: bash -lc "rbenv versions | grep {{ ruby_version }}"
-  register: ruby_installed
-  ignore_errors: true
-
 - name: install packages dependent to ruby-build and some gems
   apt: pkg={{ item }}
   sudo: yes
   with_items:
-    - build-essential
-    - libreadline-dev
-    - libssl-dev
-    - libxml2-dev
-    - libxslt1-dev
-  when: ruby_installed|failed
+    - build-essential           # ruby
+    - libreadline-dev           # ruby
+    - libssl-dev                # ruby
+    - libicu-dev                # charlock_holmes
+    - libxml2-dev               # nokogiri
+    - libxslt1-dev              # nokogiri
+
+- name: check if ruby {{ ruby_version }} is installed
+  shell: bash -lc "rbenv versions | grep {{ ruby_version }}"
+  register: ruby_installed
+  ignore_errors: true
 
 - name: rbenv install {{ ruby_version }}
   shell: bash -lc "rbenv install {{ ruby_version }}"
