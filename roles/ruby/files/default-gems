@@ -1,4 +1,5 @@
 bundler
+ghpreview
 pry
 pry-debugger
 pry-doc
