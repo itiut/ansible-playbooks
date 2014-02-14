@@ -17,3 +17,5 @@
     - openjdk-7-jdk
     - xclip
     - zeal
+
+- include: fontconfig.yml

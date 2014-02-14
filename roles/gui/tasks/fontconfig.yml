@@ -1,0 +1,6 @@
+---
+- name: user fontconfig directory
+  file: path={{ home }}/.config/fontconfig state=directory
+
+- name: locate fonts.conf
+  copy: src=fonts.conf dest={{ home }}/.config/fontconfig/fonts.conf
