@@ -25,6 +25,5 @@
 
   tasks:
     - include: tasks/ubuntu.yml
-  #   - include: tasks/emacs.yml
 
 - hosts: xubuntu
