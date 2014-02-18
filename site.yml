@@ -1,12 +1,6 @@
 ---
-- hosts: 127.0.0.1
+- hosts: localhost
   user: itiut
-
-  vars:
-    user: itiut
-    home: /home/{{ user }}
-    local_dir: "{{ home }}/local"
-    src_dir: "{{ local_dir }}/src"
 
   roles:
     - role: cui
