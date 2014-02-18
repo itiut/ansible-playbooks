@@ -1,3 +1,4 @@
 ---
-- name: "ldconfig"
-  command: ldconfig
+- name: ldconfig
+  shell: ldconfig
+  sudo: yes

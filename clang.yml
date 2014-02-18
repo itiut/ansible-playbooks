@@ -1,5 +1,4 @@
 ---
-- hosts: 127.0.0.1
-  sudo: yes
+- hosts: localhost
   roles:
     - role: clang

@@ -1,0 +1,17 @@
+---
+- name: emacs-clang-complete-async repository
+  git: repo=git://github.com/Golevka/emacs-clang-complete-async.git dest={{ clang_complete_dir }}
+
+- name: replace LLVM_CONFIG in Makefile
+  lineinfile: dest={{ clang_complete_dir }}/Makefile regexp="^LLVM_CONFIG\s*:=\sllvm-config$" line="LLVM_CONFIG := llvm-config-3.4"
+
+- name: make clang-complete
+  shell: make chdir={{ clang_complete_dir }}
+
+- name: copy clang-complete to ~/local/bin
+  copy: src={{ clang_complete_dir }}/clang-complete dest={{ local_dir }}/bin/clang-complete mode=755
+
+- name: copy conf file for ldconfig
+  copy: src=libclang.conf dest=/etc/ld.so.conf.d/libclang.conf owner=root group=root
+  sudo: yes
+  notify: ldconfig
