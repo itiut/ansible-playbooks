@@ -23,6 +23,7 @@
     - empathy-common
     - gnome-contacts
     - indicator-messages
+    - libreoffice-style-human
     - rhythmbox-data
     - thunderbird
     - ubuntuone-client-data
