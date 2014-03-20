@@ -4,3 +4,6 @@
 
 - name: copy default-gems to {{ rbenv_root }}
   copy: src=default-gems dest={{ rbenv_root }}/default-gems
+
+- name: rbenv-gem-rehash repository
+  git: repo=git://github.com/sstephenson/rbenv-gem-rehash.git dest={{ rbenv_root }}/plugins/rbenv-gem-rehash
