@@ -3,14 +3,16 @@
   user: itiut
 
   roles:
-    - role: cui
-    - role: gui
-    - role: node
-    - role: ruby
+    - { role: cui, tags: ['cui'] }
+    - { role: gui, tags: ['gui'] }
+    - { role: node, tags: ['node'] }
+    - { role: ruby, tags: ['ruby'] }
 
   tasks:
     - name: create group by DESKTOP_SESSION
       group_by: key={{ ansible_env.DESKTOP_SESSION }}
+      tags:
+        - desktop
 
 - hosts: ubuntu
 
