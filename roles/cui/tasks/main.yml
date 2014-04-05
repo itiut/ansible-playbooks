@@ -15,5 +15,5 @@
   sudo: yes
 
 - name: fonts repository
-  git: repo=ssh://git@bitbucket.org/itiut/fonts.git dest={{ home }}/.fonts
+  git: repo=ssh://git@bitbucket.org/itiut/fonts.git dest={{ home }}/.fonts accept_hostkey=yes
   notify: fc-cache
