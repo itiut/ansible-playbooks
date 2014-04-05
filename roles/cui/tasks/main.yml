@@ -13,3 +13,7 @@
 - name: usermod --shell /bin/zsh
   user: name={{ user }} shell=/bin/zsh
   sudo: yes
+
+- name: fonts repository
+  git: repo=ssh://git@bitbucket.org/itiut/fonts.git dest={{ home }}/.fonts
+  notify: fc-cache
