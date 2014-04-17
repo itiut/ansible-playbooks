@@ -12,7 +12,6 @@
     - fcitx-mozc
     - icedtea-netx
     - indicator-multiload
-    - libappindicator1
     - virtualbox
 
 - name: ubuntu | purge packages
