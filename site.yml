@@ -6,7 +6,6 @@
     - { role: cui, tags: ['cui'] }
     - { role: gui, tags: ['gui'] }
     - { role: linuxbrew, tags: ['linuxbrew'] }
-    - { role: node, tags: ['node'] }
     - { role: ruby, tags: ['ruby'] }
 
   tasks:
