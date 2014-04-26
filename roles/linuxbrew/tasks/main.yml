@@ -30,4 +30,5 @@
     - hub
     - node
     - rbenv
+    - rbenv-gem-rehash
     - ruby-build
