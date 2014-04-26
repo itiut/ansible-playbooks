@@ -1,0 +1,33 @@
+---
+- name: install packages dependent to linexbrew
+  apt: pkg={{ item }}
+  sudo: yes
+  with_items:
+    - build-essential
+    - curl
+    - git
+    - libbz2-dev
+    - libcurl4-openssl-dev
+    - libexpat1-dev
+    - libncurses5-dev
+    - zlib1g-dev
+    - ruby
+    - rake                      # for hub
+    - autoconf                  # for ruby-build
+
+- name: linuxbrew repository
+  git: repo=https://github.com/Homebrew/linuxbrew.git dest={{ home }}/.linuxbrew
+
+- name: copy linuxbrew init script
+  copy: src=linuxbrew.sh dest={{ home }}/.bashrc.linuxbrew
+
+- name: source linuxbrew init script in .bashrc
+  lineinfile: dest={{ home }}/.bashrc line="source $HOME/.bashrc.linuxbrew" create=yes mode=0644
+
+- name: install packages by linuxbrew
+  homebrew: name={{ item }}
+  with_items:
+    - hub
+    - node
+    - rbenv
+    - ruby-build
