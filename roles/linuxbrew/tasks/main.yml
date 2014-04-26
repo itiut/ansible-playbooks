@@ -32,3 +32,9 @@
     - rbenv
     - rbenv-gem-rehash
     - ruby-build
+
+- name: copy rbenv init script
+  copy: src=rbenv.sh dest={{ home }}/.bashrc.rbenv
+
+- name: source rbenv init script in .bashrc
+  lineinfile: dest={{ home }}/.bashrc line="source $HOME/.bashrc.rbenv" create=yes mode=0644
