@@ -1,3 +1,0 @@
----
-anyenv_root: "{{ home }}/.anyenv"
-anyenv_envs: "{{ anyenv_root }}/envs"
