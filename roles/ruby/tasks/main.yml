@@ -1,8 +1,40 @@
 ---
-- include: install-rbenv.yml
+- name: install packages dependent to gem packages
+  apt: pkg={{ item }}
+  sudo: yes
+  with_items:
+    - libicu-dev                # for charlock_holmes
+    - libxml2-dev               # for nokogiri
+    - libxslt1-dev              # for nokogiri
 
-- include: install-rbenv-plugins.yml
+- name: check if ruby {{ ruby_version }} is installed
+  shell: rbenv versions | grep {{ ruby_version }}
+  register: ruby_installed
+  ignore_errors: true
 
-- include: install-ruby.yml
+- name: rbenv install {{ ruby_version }}
+  shell: rbenv install {{ ruby_version }}
+  when: ruby_installed|failed
 
-- include: hub.yml
+- name: rbenv rehash
+  shell: rbenv rehash
+  when: ruby_installed|failed
+
+- name: rbenv global {{ ruby_version }}
+  shell: rbenv global {{ ruby_version }}
+  when: ruby_installed|failed
+
+- name: rbenv which gem
+  shell: rbenv which gem
+  register: gem_path
+
+- name: install gem packages
+  gem: name={{ item }} state=present executable={{ gem_path.stdout }}
+  with_items:
+    - bundler
+    - ghpreview
+    - pry
+    - pry-debugger
+    - pry-doc
+    - rubocop
+    - ruby-lint

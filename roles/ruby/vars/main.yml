@@ -1,4 +1,2 @@
 ---
 ruby_version: 2.1.1
-rbenv_root: "{{ anyenv_envs }}/rbenv"
-hub_dir: "{{ src_dir }}/hub"
