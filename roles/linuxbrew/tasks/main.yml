@@ -1,5 +1,5 @@
 ---
-- name: install packages dependent to linexbrew
+- name: install packages dependent to linuxbrew
   apt: pkg={{ item }}
   sudo: yes
   with_items:
