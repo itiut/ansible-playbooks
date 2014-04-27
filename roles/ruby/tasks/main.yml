@@ -38,3 +38,4 @@
     - pry-doc
     - rubocop
     - ruby-lint
+  when: gem_path|success
