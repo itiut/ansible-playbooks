@@ -13,7 +13,6 @@
     - zlib1g-dev
     - ruby
     - rake                      # for hub
-    - autoconf                  # for ruby-build
 
 - name: linuxbrew repository
   git: repo=https://github.com/Homebrew/linuxbrew.git dest={{ home }}/linuxbrew
@@ -29,12 +28,3 @@
   with_items:
     - hub
     - node
-    - rbenv
-    - rbenv-gem-rehash
-    - ruby-build
-
-- name: copy rbenv init script
-  copy: src=rbenv.sh dest={{ home }}/.bashrc.rbenv
-
-- name: source rbenv init script in .bashrc
-  lineinfile: dest={{ home }}/.bashrc line="source $HOME/.bashrc.rbenv" create=yes mode=0644
