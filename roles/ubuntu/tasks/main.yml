@@ -31,3 +31,7 @@
     - gnome-mines
     - gnome-sudoku
     - gnomine
+
+- name: disable guest session
+  copy: src=50-no-guest.conf dest=/usr/share/lightdm/lightdm.conf.d/50-no-guest.conf
+  sudo: yes
