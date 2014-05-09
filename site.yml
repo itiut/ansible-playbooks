@@ -16,12 +16,8 @@
 
 - hosts: ubuntu
 
-  # roles:
-  #   - role: vagrant
-
-  tasks:
-    - include: tasks/ubuntu.yml
-      tags:
-        - desktop
+  roles:
+    - { role: ubuntu, tags: ['desktop'] }
+    # - role: vagrant
 
 - hosts: xubuntu
