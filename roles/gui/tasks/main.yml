@@ -12,6 +12,7 @@
   sudo: yes
   with_items:
     - emacs24
+    - emacs-mozc
     - guake
     - nautilus-dropbox
     - openjdk-7-jdk
