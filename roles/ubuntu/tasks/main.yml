@@ -1,9 +1,9 @@
 ---
-- name: ubuntu | add-apt-repository ppa:japanese-testers/ppa
+- name: add-apt-repository ppa:japanese-testers/ppa
   apt_repository: repo=ppa:japanese-testers/ppa
   sudo: yes
 
-- name: ubuntu | install packages
+- name: install packages
   apt: pkg={{ item }}
   sudo: yes
   with_items:
@@ -13,7 +13,7 @@
     - indicator-multiload
     - virtualbox
 
-- name: ubuntu | purge packages
+- name: purge packages
   apt: pkg={{ item }} state=absent purge=yes
   sudo: yes
   with_items:
@@ -31,3 +31,7 @@
     - gnome-mines
     - gnome-sudoku
     - gnomine
+
+- name: disable guest session
+  copy: src=50-no-guest.conf dest=/usr/share/lightdm/lightdm.conf.d/50-no-guest.conf
+  sudo: yes

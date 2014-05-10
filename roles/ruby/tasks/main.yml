@@ -1,8 +1,49 @@
 ---
-- include: install-rbenv.yml
+- name: install packages dependent to ruby-build and gem packages
+  apt: pkg={{ item }}
+  sudo: yes
+  with_items:
+    - build-essential
+    - libreadline-dev
+    - libssl-dev
+    - libicu-dev                # for charlock_holmes
+    - libxml2-dev               # for nokogiri
+    - libxslt1-dev              # for nokogiri
 
-- include: install-rbenv-plugins.yml
+- name: rbenv repository
+  git: repo=git://github.com/sstephenson/rbenv.git dest={{ rbenv_root }}
 
-- include: install-ruby.yml
+- name: ruby-build repository
+  git: repo=git://github.com/sstephenson/ruby-build.git dest={{ rbenv_root }}/plugins/ruby-build
 
-- include: hub.yml
+- name: copy rbenv init script
+  copy: src=rbenv.sh dest={{ home }}/.bash_profile.rbenv
+
+- name: source rbenv init script in .bash_profile
+  lineinfile: dest={{ home }}/.bash_profile line="source $HOME/.bash_profile.rbenv" create=yes mode=0644
+
+- name: check if ruby {{ ruby_version }} is installed
+  shell: bash -lc "rbenv versions | grep {{ ruby_version }}"
+  register: ruby_installed
+  ignore_errors: true
+
+- name: rbenv install {{ ruby_version }}
+  shell: bash -lc "rbenv install {{ ruby_version }}"
+  when: ruby_installed|failed
+  notify: rehash
+
+- name: rbenv global {{ ruby_version }}
+  shell: bash -lc "rbenv global {{ ruby_version }}"
+  when: ruby_installed|failed
+
+- name: install gem packages
+  gem: name={{ item }} executable={{ rbenv_root }}/shims/gem user_install=False
+  with_items:
+    - bundler
+    - ghpreview
+    - pry
+    - pry-debugger
+    - pry-doc
+    - rubocop
+    - ruby-lint
+  notify: rehash
