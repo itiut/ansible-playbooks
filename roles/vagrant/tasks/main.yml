@@ -9,6 +9,6 @@
   when: vagrant_installed|failed
 
 - name: dpkg -i vagrant_{{ vagrant_version }}_x86_64.deb
-  shell: dpkg -i /tmp/vagrant_{{ vagrant_version }}_x86_64.deb
+  apt: deb=/tmp/vagrant_{{ vagrant_version }}_x86_64.deb
   sudo: yes
   when: vagrant_installed|failed
