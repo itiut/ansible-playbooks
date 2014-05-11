@@ -1,0 +1,8 @@
+---
+- name: install docker.io
+  apt: pkg=docker.io
+  sudo: yes
+
+- name: create symbolic link to docker.io
+  file: src=/usr/bin/docker.io dest=/usr/local/bin/docker state=link
+  sudo: yes

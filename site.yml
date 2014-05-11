@@ -19,5 +19,6 @@
   roles:
     - { role: ubuntu, tags: ['ubuntu'] }
     - { role: vagrant, tags: ['vagrant'] }
+    - { role: docker, tags: ['docker'] }
 
 - hosts: xubuntu
