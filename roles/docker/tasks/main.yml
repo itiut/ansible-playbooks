@@ -6,3 +6,12 @@
 - name: create symbolic link to docker.io
   file: src=/usr/bin/docker.io dest=/usr/local/bin/docker state=link
   sudo: yes
+
+- name: create docker group
+  group: name=docker
+  sudo: yes
+
+- name: gpasswd -a {{ user }} docker
+  user: name={{ user }} groups=docker append=yes
+  sudo: yes
+  notify: restart_docker
