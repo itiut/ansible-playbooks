@@ -12,6 +12,7 @@
     - libncurses5-dev
     - zlib1g-dev
     - ruby
+    - autoconf                  # for ruby-build
     - rake                      # for hub
 
 - name: linuxbrew repository
@@ -28,3 +29,5 @@
   with_items:
     - hub
     - node
+    - rbenv
+    - ruby-build

@@ -1,26 +1,11 @@
 ---
-- name: install packages dependent to ruby-build and gem packages
+- name: install packages dependent to gem packages
   apt: pkg={{ item }}
   sudo: yes
   with_items:
-    - build-essential
-    - libreadline-dev
-    - libssl-dev
     - libicu-dev                # for charlock_holmes
     - libxml2-dev               # for nokogiri
     - libxslt1-dev              # for nokogiri
-
-- name: rbenv repository
-  git: repo=git://github.com/sstephenson/rbenv.git dest={{ rbenv_root }}
-
-- name: ruby-build repository
-  git: repo=git://github.com/sstephenson/ruby-build.git dest={{ rbenv_root }}/plugins/ruby-build
-
-- name: copy rbenv init script
-  copy: src=rbenv.sh dest={{ home }}/.bash_profile.rbenv
-
-- name: source rbenv init script in .bash_profile
-  lineinfile: dest={{ home }}/.bash_profile line="source $HOME/.bash_profile.rbenv" create=yes mode=0644
 
 - name: check if ruby {{ ruby_version }} is installed
   shell: bash -lc "rbenv versions | grep {{ ruby_version }}"
@@ -36,8 +21,12 @@
   shell: bash -lc "rbenv global {{ ruby_version }}"
   when: ruby_installed|failed
 
+- name: which rbenv_root
+  shell: bash -lc "echo $RBENV_ROOT"
+  register: rbenv_root
+
 - name: install gem packages
-  gem: name={{ item }} executable={{ rbenv_root }}/shims/gem user_install=False
+  gem: name={{ item }} executable={{ rbenv_root.stdout }}/shims/gem user_install=False
   with_items:
     - bundler
     - ghpreview
