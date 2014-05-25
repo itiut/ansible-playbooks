@@ -22,7 +22,7 @@
   when: ruby_installed|failed
 
 - name: which rbenv_root
-  shell: bash -lc "echo $RBENV_ROOT"
+  shell: bash -lc "rbenv root"
   register: rbenv_root
 
 - name: install gem packages
