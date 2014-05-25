@@ -19,10 +19,10 @@
   git: repo=https://github.com/Homebrew/linuxbrew.git dest={{ home }}/.linuxbrew
 
 - name: copy linuxbrew init script
-  copy: src=linuxbrew.sh dest={{ home }}/.bashrc.linuxbrew
+  copy: src=linuxbrew.sh dest={{ home }}/.bash_profile.linuxbrew
 
-- name: source linuxbrew init script in .bashrc
-  lineinfile: dest={{ home }}/.bashrc line="source $HOME/.bashrc.linuxbrew" create=yes mode=0644
+- name: source linuxbrew init script in .bash_profile
+  lineinfile: dest={{ home }}/.bash_profile line="source $HOME/.bash_profile.linuxbrew" create=yes mode=0644
 
 - name: install packages by linuxbrew
   homebrew: name={{ item }} path={{ home }}/.linuxbrew/bin
