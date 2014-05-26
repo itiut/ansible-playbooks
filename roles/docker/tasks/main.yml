@@ -14,4 +14,8 @@
 - name: gpasswd -a {{ user }} docker
   user: name={{ user }} groups=docker append=yes
   sudo: yes
+
+- name: enable default DOCKER_OPTS especcially for DNS settings
+  lineinfile: dest=/etc/default/docker.io regexp="^#(DOCKER_OPTS=.*)" line='\1' backrefs=yes
+  sudo: yes
   notify: restart_docker
