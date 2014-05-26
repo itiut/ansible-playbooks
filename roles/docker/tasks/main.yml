@@ -18,4 +18,4 @@
 - name: enable default DOCKER_OPTS especcially for DNS settings
   lineinfile: dest=/etc/default/docker.io regexp="^#(DOCKER_OPTS=.*)" line='\1' backrefs=yes
   sudo: yes
-  notify: restart_docker
+  notify: restart docker
