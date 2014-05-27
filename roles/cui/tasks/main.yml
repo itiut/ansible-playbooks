@@ -3,9 +3,11 @@
   apt: pkg={{ item }}
   sudo: yes
   with_items:
+    - autossh
     - byobu
     - curl
     - silversearcher-ag
+    - sshfs
     - tig
     - vim
     - zsh
