@@ -27,6 +27,7 @@
 - name: install packages by linuxbrew
   homebrew: name={{ item }} path={{ home }}/.linuxbrew/bin
   with_items:
+    - gist
     - hub
     - node
     - rbenv
