@@ -16,6 +16,9 @@
   user: name={{ user }} shell=/bin/zsh
   sudo: yes
 
+- name: dotfiles repository
+  git: repo=ssh://git@github.com/itiut/dotfiles.git dest={{ home }}/.dotfiles accept_hostkey=yes
+
 - name: fonts repository
   git: repo=ssh://git@bitbucket.org/itiut/fonts.git dest={{ home }}/.fonts accept_hostkey=yes
   notify: fc-cache
