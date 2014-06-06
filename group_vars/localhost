@@ -2,4 +2,5 @@
 user: itiut
 home: /home/{{ user }}
 local_dir: "{{ home }}/local"
+bin_dir: "{{ local_dir }}/bin"
 src_dir: "{{ local_dir }}/src"

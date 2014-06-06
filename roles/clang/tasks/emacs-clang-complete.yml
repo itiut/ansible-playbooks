@@ -8,8 +8,11 @@
 - name: make clang-complete
   shell: make chdir={{ clang_complete_dir }}
 
-- name: copy clang-complete to ~/local/bin
-  copy: src={{ clang_complete_dir }}/clang-complete dest={{ local_dir }}/bin/clang-complete mode=755
+- name: craete directory {{ bin_dir }} if it does not exist
+  file: dest={{ bin_dir }} state=directory
+
+- name: copy clang-complete to {{ bin_dir }}
+  copy: src={{ clang_complete_dir }}/clang-complete dest={{ bin_dir }}/clang-complete mode=755
 
 - name: copy conf file for ldconfig
   copy: src=libclang.conf dest=/etc/ld.so.conf.d/libclang.conf owner=root group=root
