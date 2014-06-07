@@ -28,6 +28,7 @@
   homebrew: name={{ item }} path={{ home }}/.linuxbrew/bin
   with_items:
     - gist
+    - heroku-toolbelt
     - hub
     - node
     - rbenv
