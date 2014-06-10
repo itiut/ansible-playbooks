@@ -13,6 +13,8 @@
   with_items:
     - emacs24
     - emacs-mozc
+    - gnuplot
+    - gnuplot-x11
     - guake
     - nautilus-dropbox
     - openjdk-7-jdk
