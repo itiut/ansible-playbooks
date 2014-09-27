@@ -13,3 +13,4 @@
 - name: Install {{ item.name }} via Homebrew Cask
   homebrew_cask: name={{ item.name }}
   with_items: homebrew_cask_packages
+  notify: alfred link

@@ -1,6 +1,5 @@
 ---
 homebrew_taps:
-  - caskroom/cask
   - motemen/ghq
 
 homebrew_packages:
@@ -26,9 +25,6 @@ homebrew_packages:
       - japanese
       - srgb
       - with-gnutls
-
-  # caskroom/cask
-  - name: brew-cask
 
   # motemen/ghq
   - name: ghq
