@@ -1,7 +1,8 @@
 ---
 user: itiut
 home: '{{ ansible_env.HOME }}'
-repo_dir: '{{ home }}/src'
+
+repository_directory: '{{ home }}/src'
 local_dir: "{{ home }}/local"
 bin_dir: "{{ local_dir }}/bin"
 src_dir: "{{ local_dir }}/src"
