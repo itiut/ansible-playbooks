@@ -6,11 +6,11 @@
 - name: Update Homebrew
   homebrew: update_homebrew=yes
 
-- name: Install {{ item.name }} via Homebrew
+- name: Install packages via Homebrew
   homebrew: name={{ item.name }} install_options='{{ item.install_options | default() }}'
   with_items: homebrew_packages
 
-- name: Install {{ item.name }} via Homebrew Cask
-  homebrew_cask: name={{ item.name }}
+- name: Install packages via Homebrew Cask
+  homebrew_cask: name={{ item }}
   with_items: homebrew_cask_packages
   notify: alfred link

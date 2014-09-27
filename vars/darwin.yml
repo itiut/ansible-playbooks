@@ -30,12 +30,12 @@ homebrew_packages:
   - name: ghq
 
 homebrew_cask_packages:
-  - name: alfred
-  - name: bettertouchtool
-  - name: dropbox
-  - name: google-chrome
-  - name: google-japanese-ime
-  - name: iterm2
-  - name: java
-  - name: menumeters
-  - name: virtualbox
+  - alfred
+  - bettertouchtool
+  - dropbox
+  - google-chrome
+  - google-japanese-ime
+  - iterm2
+  - java
+  - menumeters
+  - virtualbox
