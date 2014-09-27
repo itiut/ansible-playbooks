@@ -7,7 +7,7 @@
   homebrew: update_homebrew=yes
 
 - name: Install {{ item.name }} via Homebrew
-  homebrew: name={{ item.name }} install_options='{{ item.install_options|default() }}'
+  homebrew: name={{ item.name }} install_options='{{ item.install_options | default() }}'
   with_items: homebrew_packages
 
 - name: Install {{ item.name }} via Homebrew Cask
