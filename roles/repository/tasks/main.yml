@@ -1,0 +1,4 @@
+---
+- name: Update repositories
+  git: repo='{{ item.scheme }}{{ item.path }}' dest='{{ ansible_env.HOME }}/src/{{ item.path }}' accept_hostkey=yes
+  with_items: repositories

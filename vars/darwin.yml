@@ -39,3 +39,11 @@ homebrew_cask_packages:
   - java
   - menumeters
   - virtualbox
+
+repositories:
+  - scheme: git://
+    path:   github.com/zsh-users/antigen
+  - scheme: git://
+    path:   github.com/itiut/dotfiles
+  - scheme: ssh://git@
+    path:   bitbucket.org/itiut/fonts
