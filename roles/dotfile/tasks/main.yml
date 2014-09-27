@@ -1,0 +1,8 @@
+---
+- name: Create dotfile parent directories
+  file: path={{ home }}/{{ item.name }} state=directory mode={{ item.mode | default(0755) }}
+  with_items: dotfiles_parent_directories
+
+- name: Create symbolic links
+  file: src={{ item.target_directory | default(dotfiles_directory) }}/{{ item.name }} dest={{ home }}/{{ item.name }} state=link
+  with_items: dotfiles
