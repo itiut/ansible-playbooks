@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  connection: local
+  user: itiut
+
+  vars_files:
+    - vars/darwin.yml
+
+  roles:
+    - { role: homebrew, tags: ['homebrew'] }

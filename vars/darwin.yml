@@ -1,0 +1,45 @@
+---
+homebrew_taps:
+  - caskroom/cask
+  - motemen/ghq
+
+homebrew_packages:
+  - name: aspell
+  - name: cask
+  - name: coreutils
+  - name: gist
+  - name: git
+  - name: hub
+  - name: mysql
+  - name: pyenv
+  - name: rbenv
+  - name: rbenv-default-gems
+  - name: ruby-build
+  - name: ssh-copy-id
+  - name: the_silver_searcher
+  - name: tig
+  - name: zsh
+
+  - name: emacs
+    install_options:
+      - cocoa
+      - japanese
+      - srgb
+      - with-gnutls
+
+  # caskroom/cask
+  - name: brew-cask
+
+  # motemen/ghq
+  - name: ghq
+
+homebrew_cask_packages:
+  - name: alfred
+  - name: bettertouchtool
+  - name: dropbox
+  - name: google-chrome
+  - name: google-japanese-ime
+  - name: iterm2
+  - name: java
+  - name: menumeters
+  - name: virtualbox

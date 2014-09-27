@@ -1,0 +1,15 @@
+---
+- name: Tap repositories
+  homebrew_tap: tap={{ item }}
+  with_items: homebrew_taps
+
+- name: Update Homebrew
+  homebrew: update_homebrew=yes
+
+- name: Install {{ item.name }} via Homebrew
+  homebrew: name={{ item.name }} install_options='{{ item.install_options|default() }}'
+  with_items: homebrew_packages
+
+- name: Install {{ item.name }} via Homebrew Cask
+  homebrew_cask: name={{ item.name }}
+  with_items: homebrew_cask_packages
