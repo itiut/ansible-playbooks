@@ -1,20 +1,22 @@
 ---
-# TODO: fix
-# - name: install packages dependent to linuxbrew
-#   apt: pkg={{ item }}
-#   sudo: yes
-#   with_items:
-#     - build-essential
-#     - curl
-#     - git
-#     - libbz2-dev
-#     - libcurl4-openssl-dev
-#     - libexpat1-dev
-#     - libncurses5-dev
-#     - zlib1g-dev
-#     - ruby
-#     - autoconf                  # for ruby-build
-#     - rake                      # for hub
+- name: Install packages dependent to Linuxbrew
+  apt: name={{ item }}
+  sudo: yes
+  with_items:
+    - build-essential
+    - curl
+    - git
+    - m4
+    - ruby
+    - texinfo
+    - libbz2-dev
+    - libcurl4-openssl-dev
+    - libexpat1-dev
+    - libncurses5-dev
+    - zlib1g-dev
+    # TODO: fix
+    # - autoconf                  # for ruby-build
+    # - rake                      # for hub
 
 - name: Install Linuxbrew
   git: repo=https://github.com/Homebrew/linuxbrew.git dest={{ home }}/.linuxbrew
