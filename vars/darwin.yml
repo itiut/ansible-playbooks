@@ -61,6 +61,7 @@ dotfiles:
   - name: .emacs.d
   - name: .gemrc
   - name: .gitconfig
+  - name: .my.cnf
   - name: .pryrc
   - name: .rbenv/default-gems
   - name: .rspec
