@@ -3,7 +3,7 @@ user: '{{ ansible_env.USER }}'
 home: '{{ ansible_env.HOME }}'
 
 # role: brew
-linuxbrew_packages:
+brew_packages:
   - name: aspell
   - name: cask
   - name: gist

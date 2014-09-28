@@ -7,9 +7,9 @@
     - vars/common.yml
 
   roles:
-    - { role: linuxbrew, tags: ['linuxbrew'] }
+    - { role: brew,       tags: ['brew'] }
     - { role: repository, tags: ['repository'] }
-    - { role: dotfile, tags: ['dotfile'] }
+    - { role: dotfile,    tags: ['dotfile'] }
     - { role: loginshell, tags: ['loginshell'] }
 
 #   roles:

@@ -1,2 +1,4 @@
 ---
+# Linux
 fonts_directory: .fonts
+brew_path: '{{ home }}/.linuxbrew/bin'
