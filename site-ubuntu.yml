@@ -8,6 +8,7 @@
   roles:
     # - { role: darwin, tags: ['darwin'] }
     # - { role: homebrew, tags: ['homebrew'] }
+    - { role: linuxbrew, tags: ['linuxbrew'] }
     - { role: repository, tags: ['repository'] }
     - { role: dotfile, tags: ['dotfile'] }
     # - { role: loginshell, tags: ['loginshell'] }

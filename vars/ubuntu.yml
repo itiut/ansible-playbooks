@@ -40,6 +40,16 @@ homebrew_cask_packages:
   - menumeters
   - virtualbox
 
+linuxbrew_packages:
+  - name: cask
+  - name: gist
+  - name: hub
+  - name: pyenv
+  - name: rbenv
+  - name: rbenv-default-gems
+  - name: ruby-build
+  - name: tig
+
 repositories:
   - path: github.com/mbadolato/iTerm2-Color-Schemes
   - path: github.com/seebi/dircolors-solarized
