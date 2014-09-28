@@ -1,4 +1,7 @@
 ---
+# TODO: confirm
+fonts_directory: Library/Fonts
+
 homebrew_taps:
   - motemen/ghq
 
@@ -39,17 +42,3 @@ homebrew_cask_packages:
   - java
   - menumeters
   - virtualbox
-
-linuxbrew_packages:
-  - name: aspell
-  - name: cask
-  - name: gist
-  - name: hub
-  - name: pyenv
-  - name: rbenv
-  - name: rbenv-default-gems
-  - name: ruby-build
-  - name: ssh-copy-id
-  - name: the_silver_searcher
-  - name: tig
-  - name: zsh

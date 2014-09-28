@@ -22,6 +22,37 @@ dotfiles_parent_directories:
   - name: .zsh.d
   - { name: .ssh, mode: '0700' }
 
+dotfiles:
+  - name: .Xmodmap
+  - name: .aspell.conf
+  # - name: .emacs.d
+  - name: .gemrc
+  - name: .gitconfig
+  - name: .my.cnf
+  - name: .pryrc
+  - name: .rbenv/default-gems
+  - name: .rspec
+  - name: .rubocop.yml
+  - name: .tigrc
+  - name: .vimrc
+  - name: .zsh.d/itiut.zsh-theme
+  - name: .zshenv
+  - name: .zshrc
+  - name: .zshrc.darwin
+  - name: .zshrc.linux
+
+  - { name: .gitconfig.local, target_directory: '{{ private_dotfiles_directory }}' }
+  - { name: .ssh/config,      target_directory: '{{ private_dotfiles_directory }}' }
+  - { name: .zshenv.local,    target_directory: '{{ private_dotfiles_directory }}' }
+
+  - name: dircolors.ansi-universal
+    target_directory: '{{ repository_directory }}/github.com/seebi/dircolors-solarized'
+    link: .dircolors
+
+  - name: fonts
+    target_directory: '{{ repository_directory }}/bitbucket.org/itiut'
+    link: '{{ fonts_directory }}'
+
 
 # role: loginshell
 zsh_paths:
