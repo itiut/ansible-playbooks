@@ -1,0 +1,4 @@
+---
+- name: Update repositories
+  git: repo='{{ item.scheme | default("git://") }}{{ item.path }}' dest='{{ repository_directory }}/{{ item.path }}' accept_hostkey=yes
+  with_items: repositories

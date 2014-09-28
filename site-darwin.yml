@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  connection: local
+
+  vars_files:
+    - vars/darwin.yml
+
+  roles:
+    - { role: darwin, tags: ['darwin'] }
+    - { role: homebrew, tags: ['homebrew'] }
+    - { role: repository, tags: ['repository'] }
+    - { role: dotfile, tags: ['dotfile'] }
+    - { role: loginshell, tags: ['loginshell'] }
