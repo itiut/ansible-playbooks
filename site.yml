@@ -1,25 +1,35 @@
 ---
 - hosts: localhost
-  user: itiut
+  connection: local
+
+  vars_files:
+    - vars/common.yml
+    - vars/ubuntu.yml
 
   roles:
-    - { role: cui, tags: ['cui'] }
-    - { role: docker, tags: ['docker'] }
-    - { role: gui, tags: ['gui'] }
     - { role: linuxbrew, tags: ['linuxbrew'] }
-    - { role: mysql, tags: ['mysql'] }
-    - { role: ruby, tags: ['ruby'] }
+    - { role: repository, tags: ['repository'] }
+    - { role: dotfile, tags: ['dotfile'] }
+    - { role: loginshell, tags: ['loginshell'] }
 
-  tasks:
-    - name: create group by DESKTOP_SESSION
-      group_by: key={{ ansible_env.DESKTOP_SESSION }}
-      tags:
-        - desktop
+#   roles:
+#     - { role: cui, tags: ['cui'] }
+#     - { role: docker, tags: ['docker'] }
+#     - { role: gui, tags: ['gui'] }
+#     - { role: linuxbrew, tags: ['linuxbrew'] }
+#     - { role: mysql, tags: ['mysql'] }
+#     - { role: ruby, tags: ['ruby'] }
 
-- hosts: ubuntu
+#   tasks:
+#     - name: create group by DESKTOP_SESSION
+#       group_by: key={{ ansible_env.DESKTOP_SESSION }}
+#       tags:
+#         - desktop
 
-  roles:
-    - { role: ubuntu, tags: ['ubuntu'] }
-    - { role: vagrant, tags: ['vagrant'] }
+# - hosts: ubuntu
 
-- hosts: xubuntu
+#   roles:
+#     - { role: ubuntu, tags: ['ubuntu'] }
+#     - { role: vagrant, tags: ['vagrant'] }
+
+# - hosts: xubuntu
