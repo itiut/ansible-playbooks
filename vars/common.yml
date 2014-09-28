@@ -96,7 +96,7 @@ dotfiles:
 
   - name: fonts
     target_directory: '{{ repository_directory }}/bitbucket.org/itiut'
-    link: '{{ fonts_directory }}'
+    link: .fonts
 
 
 # role: loginshell
