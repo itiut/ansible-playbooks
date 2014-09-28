@@ -7,6 +7,7 @@
     - curl
     - git
     - m4
+    - rake
     - ruby
     - texinfo
     - libbz2-dev
@@ -14,9 +15,6 @@
     - libexpat1-dev
     - libncurses5-dev
     - zlib1g-dev
-    # TODO: fix
-    # - autoconf                  # for ruby-build
-    # - rake                      # for hub
 
 - name: Install Linuxbrew
   git: repo=https://github.com/Homebrew/linuxbrew.git dest={{ home }}/.linuxbrew
