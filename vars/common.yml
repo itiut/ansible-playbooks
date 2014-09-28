@@ -6,10 +6,16 @@ home: '{{ ansible_env.HOME }}'
 apt_packages:
   - emacs24
   - guake
+  - indicator-multiload
   - vim
+  - virtualbox
   - xclip
 
   # TODO
+  # - emacs-mozc
+  # - fcitx
+  # - fcitx-mozc
+  # - icedtea-netx
   # - nautilus-dropbox
   # - openjdk-8-jdk
   # - zeal

@@ -13,20 +13,6 @@
     - { role: dotfile,    tags: ['dotfile'] }
     - { role: loginshell, tags: ['loginshell'] }
 
-#   roles:
 #     - { role: docker, tags: ['docker'] }
 #     - { role: mysql, tags: ['mysql'] }
-
-#   tasks:
-#     - name: create group by DESKTOP_SESSION
-#       group_by: key={{ ansible_env.DESKTOP_SESSION }}
-#       tags:
-#         - desktop
-
-# - hosts: ubuntu
-
-#   roles:
-#     - { role: ubuntu, tags: ['ubuntu'] }
 #     - { role: vagrant, tags: ['vagrant'] }
-
-# - hosts: xubuntu
