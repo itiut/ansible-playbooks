@@ -2,6 +2,22 @@
 user: '{{ ansible_env.USER }}'
 home: '{{ ansible_env.HOME }}'
 
+# role: brew
+linuxbrew_packages:
+  - name: aspell
+  - name: cask
+  - name: gist
+  - name: hub
+  - name: pyenv
+  - name: rbenv
+  - name: rbenv-default-gems
+  - name: ruby-build
+  - name: ssh-copy-id
+  - name: the_silver_searcher
+  - name: tig
+  - name: zsh
+
+
 # role: repository
 repository_directory: '{{ home }}/src'
 
