@@ -17,6 +17,35 @@ brew_packages:
   - name: tig
   - name: zsh
 
+homebrew_taps:
+  - motemen/ghq
+
+homebrew_packages:
+  - name: coreutils
+  - name: git
+  - name: mysql
+
+  - name: emacs
+    install_options:
+      - cocoa
+      - japanese
+      - srgb
+      - with-gnutls
+
+  # motemen/ghq
+  - name: ghq
+
+homebrew_cask_packages:
+  - alfred
+  - bettertouchtool
+  - dropbox
+  - google-chrome
+  - google-japanese-ime
+  - iterm2
+  - java
+  - menumeters
+  - virtualbox
+
 
 # role: repository
 repository_directory: '{{ home }}/src'
