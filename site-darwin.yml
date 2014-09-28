@@ -10,3 +10,4 @@
     - { role: homebrew, tags: ['homebrew'] }
     - { role: repository, tags: ['repository'] }
     - { role: dotfile, tags: ['dotfile'] }
+    - { role: loginshell, tags: ['loginshell'] }
