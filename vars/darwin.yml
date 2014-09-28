@@ -41,6 +41,8 @@ homebrew_cask_packages:
   - virtualbox
 
 repositories:
+  - path: github.com/mbadolato/iTerm2-Color-Schemes
+  - path: github.com/seebi/dircolors-solarized
   - path: github.com/zsh-users/antigen
   - path: github.com/itiut/dotfiles
 
@@ -76,3 +78,7 @@ dotfiles:
     target_directory: '{{ private_dotfiles_directory }}'
   - name: .zshenv.local
     target_directory: '{{ private_dotfiles_directory }}'
+
+  - name: dircolors.ansi-universal
+    target_directory: '{{ repository_directory }}/github.com/seebi/dircolors-solarized'
+    link: .dircolors
