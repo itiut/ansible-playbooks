@@ -15,10 +15,7 @@
 
 #   roles:
 #     - { role: docker, tags: ['docker'] }
-#     - { role: gui, tags: ['gui'] }
-#     - { role: linuxbrew, tags: ['linuxbrew'] }
 #     - { role: mysql, tags: ['mysql'] }
-#     - { role: ruby, tags: ['ruby'] }
 
 #   tasks:
 #     - name: create group by DESKTOP_SESSION
