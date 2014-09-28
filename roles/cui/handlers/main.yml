@@ -1,3 +1,0 @@
----
-- name: fc-cache
-  shell: fc-cache -f
