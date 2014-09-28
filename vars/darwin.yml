@@ -40,22 +40,6 @@ homebrew_cask_packages:
   - menumeters
   - virtualbox
 
-repositories:
-  - path: github.com/mbadolato/iTerm2-Color-Schemes
-  - path: github.com/seebi/dircolors-solarized
-  - path: github.com/zsh-users/antigen
-  - path: github.com/itiut/dotfiles
-
-  - path: bitbucket.org/itiut/fonts
-    scheme: ssh://git@
-
-dotfiles_parent_directories:
-  - name: .rbenv
-  - name: .zsh.d
-
-  - name: .ssh
-    mode: '0700'
-
 dotfiles:
   - name: .aspell.conf
   - name: .emacs.d

@@ -2,14 +2,33 @@
 user: '{{ ansible_env.USER }}'
 home: '{{ ansible_env.HOME }}'
 
+# role: repository
 repository_directory: '{{ home }}/src'
+
+repositories:
+  - path: github.com/mbadolato/iTerm2-Color-Schemes
+  - path: github.com/seebi/dircolors-solarized
+  - path: github.com/zsh-users/antigen
+  - path: github.com/itiut/dotfiles
+  - { path: bitbucket.org/itiut/fonts, scheme: 'ssh://git@' }
+
+
+# role: dotfile
 dotfiles_directory: '{{ repository_directory }}/github.com/itiut/dotfiles/linked'
 private_dotfiles_directory: '{{ home }}/Dropbox/.share'
 
+dotfiles_parent_directories:
+  - name: .rbenv
+  - name: .zsh.d
+  - { name: .ssh, mode: '0700' }
+
+
+# role: loginshell
 zsh_paths:
   - '{{ home }}/.linuxbrew/bin/zsh'
   - /usr/local/bin/zsh
   - /bin/zsh
+
 
 local_dir: "{{ home }}/local"
 bin_dir: "{{ local_dir }}/bin"
