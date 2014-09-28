@@ -4,7 +4,15 @@ home: '{{ ansible_env.HOME }}'
 
 # role: apt
 apt_packages:
+  - emacs24
+  - guake
   - vim
+  - xclip
+
+  # TODO
+  # - nautilus-dropbox
+  # - openjdk-8-jdk
+  # - zeal
 
 # role: brew
 brew_packages:
@@ -20,6 +28,9 @@ brew_packages:
   - name: the_silver_searcher
   - name: tig
   - name: zsh
+
+  # TODO
+  # - name: gnuplot
 
 homebrew_taps:
   - motemen/ghq
