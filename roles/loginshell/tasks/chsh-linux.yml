@@ -1,0 +1,4 @@
+---
+- name: Linux | Set login shell to zsh
+  user: name={{ user }} shell={{ lookup('first_found', zsh_paths) }}
+  sudo: yes

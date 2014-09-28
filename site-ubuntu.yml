@@ -11,4 +11,4 @@
     - { role: linuxbrew, tags: ['linuxbrew'] }
     - { role: repository, tags: ['repository'] }
     - { role: dotfile, tags: ['dotfile'] }
-    # - { role: loginshell, tags: ['loginshell'] }
+    - { role: loginshell, tags: ['loginshell'] }

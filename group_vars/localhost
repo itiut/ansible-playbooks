@@ -6,6 +6,10 @@ repository_directory: '{{ home }}/src'
 dotfiles_directory: '{{ repository_directory }}/github.com/itiut/dotfiles/linked'
 private_dotfiles_directory: '{{ home }}/Dropbox/.share'
 
+zsh_paths:
+  - /usr/local/bin/zsh
+  - /bin/zsh
+
 local_dir: "{{ home }}/local"
 bin_dir: "{{ local_dir }}/bin"
 src_dir: "{{ local_dir }}/src"
