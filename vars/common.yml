@@ -93,7 +93,7 @@ dotfiles:
   - name: .Xmodmap
   - name: .aspell.conf
   - name: .config/fontconfig/fonts.conf
-  # - name: .emacs.d
+  - name: .emacs.d
   - name: .gemrc
   - name: .gitconfig
   - name: .my.cnf
