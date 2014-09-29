@@ -1,0 +1,3 @@
+---
+# Linux
+brew_path: '{{ home }}/.linuxbrew/bin/brew'

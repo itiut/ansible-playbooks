@@ -1,25 +1,18 @@
 ---
 - hosts: localhost
-  user: itiut
+  connection: local
+
+  vars_files:
+    - [ "vars/{{ ansible_os_family }}.yml", vars/os_defaults.yml ]
+    - vars/common.yml
 
   roles:
-    - { role: cui, tags: ['cui'] }
-    - { role: docker, tags: ['docker'] }
-    - { role: gui, tags: ['gui'] }
-    - { role: linuxbrew, tags: ['linuxbrew'] }
-    - { role: mysql, tags: ['mysql'] }
-    - { role: ruby, tags: ['ruby'] }
+    - { role: apt,        tags: ['apt'],        when: ansible_os_family == 'Debian' }
+    - { role: brew,       tags: ['brew'] }
+    - { role: repository, tags: ['repository'] }
+    - { role: dotfile,    tags: ['dotfile'] }
+    - { role: loginshell, tags: ['loginshell'] }
 
-  tasks:
-    - name: create group by DESKTOP_SESSION
-      group_by: key={{ ansible_env.DESKTOP_SESSION }}
-      tags:
-        - desktop
-
-- hosts: ubuntu
-
-  roles:
-    - { role: ubuntu, tags: ['ubuntu'] }
-    - { role: vagrant, tags: ['vagrant'] }
-
-- hosts: xubuntu
+#     - { role: docker, tags: ['docker'] }
+#     - { role: mysql, tags: ['mysql'] }
+#     - { role: vagrant, tags: ['vagrant'] }

@@ -1,0 +1,10 @@
+---
+- name: Add zsh path to /etc/shells
+  lineinfile: dest=/etc/shells line={{ lookup('first_found', zsh_paths) }}
+  sudo: yes
+
+- include: chsh-darwin.yml
+  when: "ansible_os_family == 'Darwin'"
+
+- include: chsh-linux.yml
+  when: "ansible_os_family != 'Darwin'"

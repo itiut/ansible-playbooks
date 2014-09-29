@@ -1,0 +1,9 @@
+---
+- name: Darwin | Check if login shell is set to zsh
+  shell: dscl . -read {{ home }} UserShell | cut -d ' ' -f 2
+  register: old_shell
+
+- name: Darwin | Set login shell to zsh
+  shell: dscl . -change {{ home }} UserShell {{ old_shell.stdout }} {{ lookup('first_found', zsh_paths) }}
+  sudo: yes
+  when: old_shell.stdout != lookup('first_found', zsh_paths)

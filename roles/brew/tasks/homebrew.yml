@@ -1,0 +1,9 @@
+---
+- name: homebrew | Install packages via Homebrew
+  homebrew: name={{ item.name }} install_options='{{ item.install_options | default() }}'
+  with_items: homebrew_packages
+
+- name: homebrew | Install packages via Homebrew Cask
+  homebrew_cask: name={{ item }}
+  with_items: homebrew_cask_packages
+  notify: alfred link

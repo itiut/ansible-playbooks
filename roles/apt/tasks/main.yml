@@ -1,0 +1,5 @@
+---
+- name: Install packages via apt
+  apt: name={{ item }}
+  sudo: yes
+  with_items: apt_packages
