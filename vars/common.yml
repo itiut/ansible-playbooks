@@ -84,11 +84,10 @@ dotfiles_directory: '{{ repository_directory }}/github.com/itiut/dotfiles/linked
 private_dotfiles_directory: '{{ home }}/Dropbox/.share'
 
 dotfiles_parent_directories:
-  - name: .config/autostart
-  - name: .config/fontconfig
-  - name: .rbenv
-  - name: .zsh.d
-  - { name: .ssh, mode: '0700' }
+  - .config/autostart
+  - .config/fontconfig
+  - .rbenv
+  - .zsh.d
 
 dotfiles:
   - name: .Xmodmap
