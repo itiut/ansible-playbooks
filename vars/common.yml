@@ -53,6 +53,10 @@ homebrew_packages:
       - srgb
       - with-gnutls
 
+  - name: go
+    install_options:
+      - cross-compile-common
+
   # motemen/ghq
   - name: ghq
 
