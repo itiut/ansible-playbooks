@@ -68,6 +68,7 @@ homebrew_cask_packages:
   - google-japanese-ime
   - iterm2
   - java
+  - mendeley-desktop
   - menumeters
   - virtualbox
 
