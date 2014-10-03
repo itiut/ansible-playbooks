@@ -64,6 +64,7 @@ homebrew_packages:
 homebrew_cask_packages:
   - alfred
   - bettertouchtool
+  - cheatsheet
   - clipmenu
   - dropbox
   - google-chrome
