@@ -30,6 +30,7 @@ brew_packages:
   - name: rbenv
   - name: rbenv-default-gems
   - name: ruby-build
+  - name: shellcheck
   - name: ssh-copy-id
   - name: the_silver_searcher
   - name: tig
