@@ -66,6 +66,7 @@ homebrew_cask_packages:
   - bettertouchtool
   - cheatsheet
   - clipmenu
+  - dash
   - dropbox
   - google-chrome
   - google-japanese-ime
