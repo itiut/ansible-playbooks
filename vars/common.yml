@@ -26,7 +26,6 @@ brew_packages:
   - name: cask
   - name: gist
   - name: hub
-  - name: pyenv
   - name: rbenv
   - name: rbenv-default-gems
   - name: ruby-build
@@ -68,7 +67,6 @@ homebrew_cask_packages:
   - google-chrome
   - google-japanese-ime
   - iterm2
-  - java
   - mendeley-desktop
   - menumeters
   - virtualbox
