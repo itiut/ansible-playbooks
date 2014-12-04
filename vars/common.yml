@@ -50,9 +50,6 @@ homebrew_packages:
   - name: emacs
     install_options:
       - cocoa
-      - japanese
-      - srgb
-      - with-gnutls
 
   - name: go
     install_options:
