@@ -26,6 +26,7 @@ brew_packages:
   - name: cask
   - name: gist
   - name: hub
+  - name: imagemagick
   - name: rbenv
   - name: rbenv-default-gems
   - name: ruby-build
@@ -64,6 +65,7 @@ homebrew_cask_packages:
   - clipmenu
   - dash
   - dropbox
+  - gimp
   - google-chrome
   - google-japanese-ime
   - iterm2
