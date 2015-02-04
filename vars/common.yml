@@ -65,6 +65,7 @@ homebrew_cask_packages:
   - clipmenu
   - dash
   - dropbox
+  - evernote
   - gimp
   - google-chrome
   - google-japanese-ime
