@@ -46,6 +46,7 @@ homebrew_packages:
   - name: coreutils
   - name: git
   - name: mysql
+  - name: postgresql
 
   - name: emacs
     install_options:
