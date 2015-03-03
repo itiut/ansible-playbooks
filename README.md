@@ -5,7 +5,7 @@ Ansible playbooks for my enviroments
 
 Target Environments
 ----
-* OS X Mavericks 10.9
+* OS X Yosemite 10.10
 * Ubuntu 14.04
 
 
