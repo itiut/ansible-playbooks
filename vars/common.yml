@@ -26,7 +26,7 @@ brew_packages:
   - name: cask
   - name: gist
   - name: hub
-  - name: pyenv
+  - name: imagemagick
   - name: rbenv
   - name: rbenv-default-gems
   - name: ruby-build
@@ -46,13 +46,11 @@ homebrew_packages:
   - name: coreutils
   - name: git
   - name: mysql
+  - name: postgresql
 
   - name: emacs
     install_options:
       - cocoa
-      - japanese
-      - srgb
-      - with-gnutls
 
   - name: go
     install_options:
@@ -68,12 +66,14 @@ homebrew_cask_packages:
   - clipmenu
   - dash
   - dropbox
+  - evernote
+  - gimp
   - google-chrome
   - google-japanese-ime
   - iterm2
-  - java
   - mendeley-desktop
   - menumeters
+  - skitch
   - virtualbox
 
 
@@ -106,6 +106,7 @@ dotfiles:
   - name: .emacs.d
   - name: .gemrc
   - name: .gitconfig
+  - name: .gitignore_global
   - name: .my.cnf
   - name: .pryrc
   - name: .rbenv/default-gems
