@@ -54,7 +54,7 @@ homebrew_packages:
 
   - name: go
     install_options:
-      - cross-compile-common
+      - with-cc-common
 
   # motemen/ghq
   - name: ghq
