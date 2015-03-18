@@ -27,6 +27,7 @@ brew_packages:
   - name: gist
   - name: hub
   - name: imagemagick
+  - name: python3
   - name: rbenv
   - name: rbenv-default-gems
   - name: ruby-build
@@ -34,12 +35,14 @@ brew_packages:
   - name: ssh-copy-id
   - name: the_silver_searcher
   - name: tig
+  - name: zeromq
   - name: zsh
 
   # TODO
   # - name: gnuplot
 
 homebrew_taps:
+  - homebrew/python
   - motemen/ghq
 
 homebrew_packages:
@@ -55,6 +58,11 @@ homebrew_packages:
   - name: go
     install_options:
       - with-cc-common
+
+  # homebrew/python
+  - name: matplotlib
+    install_options:
+      - with-python3
 
   # motemen/ghq
   - name: ghq
