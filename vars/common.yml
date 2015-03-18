@@ -23,7 +23,7 @@ apt_packages:
 # role: brew
 brew_packages:
   - name: aspell
-  - name: cask
+  - name: cask                  # TODO: dependent to brewed emacs
   - name: gist
   - name: hub
   - name: imagemagick
@@ -62,7 +62,7 @@ homebrew_packages:
   # homebrew/python
   - name: matplotlib
     install_options:
-      - with-python3
+      - with-python3            # TODO: dependent to brewed python3
 
   # motemen/ghq
   - name: ghq
