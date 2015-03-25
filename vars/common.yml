@@ -81,6 +81,7 @@ homebrew_cask_packages:
   - iterm2
   - mendeley-desktop
   - menumeters
+  - pgadmin3
   - qlstephen
   - skitch
   - virtualbox
