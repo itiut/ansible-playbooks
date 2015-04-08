@@ -84,6 +84,7 @@ homebrew_cask_packages:
   - pgadmin3
   - qlstephen
   - skitch
+  - slack
   - virtualbox
 
 
