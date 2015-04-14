@@ -1,4 +1,4 @@
-itiut-ansible-playbooks
+ansible-playbooks
 ====
 Ansible playbooks for my enviroments
 
