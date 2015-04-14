@@ -1,6 +1,6 @@
 ansible-playbooks
 ====
-Ansible playbooks for my enviroments
+Ansible playbooks for my development enviroments
 
 
 Target Environments
@@ -30,8 +30,10 @@ $ sudo pip install ansible
 Installation
 ----
 ```console
-$ ssh-keygen -t rsa
-$ git clone git://github.com/itiut/itiut-ansible-playbooks ~/src/github.com/itiut/itiut-ansible-playbooks
+$ ssh-keygen
+$ mkdir -p ~/src/github.com/itiut
+$ cd $_
+$ git clone git://github.com/itiut/ansible-playbooks.git
 ```
 
 
