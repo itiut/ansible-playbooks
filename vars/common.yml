@@ -80,8 +80,10 @@ homebrew_cask_packages:
   - google-japanese-ime
   - iterm2
   - mendeley-desktop
-  - menumeters
+  - pgadmin3
+  - qlstephen
   - skitch
+  - slack
   - virtualbox
 
 
