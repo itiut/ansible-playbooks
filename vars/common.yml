@@ -38,9 +38,6 @@ brew_packages:
   - name: zeromq
   - name: zsh
 
-  # TODO
-  # - name: gnuplot
-
 homebrew_taps:
   - homebrew/python
   - motemen/ghq
@@ -70,7 +67,6 @@ homebrew_packages:
 homebrew_cask_packages:
   - alfred
   - bettertouchtool
-  - cheatsheet
   - clipmenu
   - dash
   - dropbox
