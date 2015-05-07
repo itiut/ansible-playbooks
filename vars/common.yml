@@ -74,6 +74,7 @@ homebrew_cask_packages:
   - gimp
   - google-chrome
   - google-japanese-ime
+  - inkscape
   - iterm2
   - mendeley-desktop
   - pgadmin3
