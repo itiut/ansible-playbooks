@@ -12,7 +12,3 @@
     - { role: repository, tags: ['repository'] }
     - { role: dotfile,    tags: ['dotfile'] }
     - { role: loginshell, tags: ['loginshell'] }
-
-#     - { role: docker, tags: ['docker'] }
-#     - { role: mysql, tags: ['mysql'] }
-#     - { role: vagrant, tags: ['vagrant'] }

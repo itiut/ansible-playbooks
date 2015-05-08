@@ -1,2 +1,0 @@
----
-clang_complete_dir: "{{ src_dir }}/emacs-clang-complete-async"

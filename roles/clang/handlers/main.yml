@@ -1,4 +1,0 @@
----
-- name: ldconfig
-  shell: ldconfig
-  sudo: yes
