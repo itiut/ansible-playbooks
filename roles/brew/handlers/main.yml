@@ -1,3 +1,0 @@
----
-- name: alfred link
-  shell: /usr/local/bin/brew cask alfred link

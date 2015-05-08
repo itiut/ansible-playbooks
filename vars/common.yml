@@ -14,24 +14,6 @@ pacman_install:
   - xclip
   - zsh
 
-# role: apt
-apt_packages:
-  - emacs24
-  - guake
-  - indicator-multiload
-  - vim
-  - virtualbox
-  - xclip
-
-  # TODO
-  # - emacs-mozc
-  # - fcitx
-  # - fcitx-mozc
-  # - icedtea-netx
-  # - nautilus-dropbox
-  # - openjdk-8-jdk
-  # - zeal
-
 # role: brew
 brew_packages:
   - name: aspell
@@ -95,7 +77,6 @@ homebrew_cask_packages:
   - slack
   - virtualbox
 
-
 # role: repository
 repository_directory: '{{ home }}/src'
 
@@ -105,7 +86,6 @@ repositories:
   - path: github.com/zsh-users/antigen
   - path: github.com/itiut/dotfiles
   - { path: bitbucket.org/itiut/fonts, scheme: 'ssh://git@' }
-
 
 # role: dotfile
 dotfiles_directory: '{{ repository_directory }}/github.com/itiut/dotfiles/linked'
@@ -151,14 +131,7 @@ dotfiles:
     target_directory: '{{ repository_directory }}/bitbucket.org/itiut'
     link: .fonts
 
-
 # role: loginshell
 zsh_paths:
-  - '{{ home }}/.linuxbrew/bin/zsh'
   - /usr/local/bin/zsh
   - /bin/zsh
-
-
-local_dir: "{{ home }}/local"
-bin_dir: "{{ local_dir }}/bin"
-src_dir: "{{ local_dir }}/src"
