@@ -1,9 +1,0 @@
----
-- name: install clang
-  apt: pkg={{ item }}
-  sudo: yes
-  with_items:
-    - clang-3.4
-    - libclang-3.4-dev
-
-- include: emacs-clang-complete.yml
