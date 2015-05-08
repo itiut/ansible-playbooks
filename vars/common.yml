@@ -2,6 +2,18 @@
 user: '{{ ansible_env.USER }}'
 home: '{{ ansible_env.HOME }}'
 
+# role: pacman
+pacman_install:
+  - dropbox
+  - emacs
+  - guake
+  - hub
+  - the_silver_searcher
+  - tig
+  - vim
+  - xclip
+  - zsh
+
 # role: apt
 apt_packages:
   - emacs24
