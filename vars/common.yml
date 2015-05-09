@@ -4,6 +4,7 @@ home: '{{ ansible_env.HOME }}'
 
 # role: itiut.pacman
 pacman_install:
+  - aspell-en
   - dropbox
   - emacs
   - guake
