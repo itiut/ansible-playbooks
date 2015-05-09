@@ -20,6 +20,7 @@ affected_users: []        # workaround to avoid creating ~/.common-env
 
 # role: osxc.packages
 brew_taps:
+  - caskroom/fonts
   - homebrew/python
   - motemen/ghq
 
@@ -58,6 +59,9 @@ cask_packages:
   - dropbox
   - emacs
   - evernote
+  - font-noto-sans-japanese
+  - font-ricty-diminished
+  - font-source-code-pro-for-powerline
   - gimp
   - google-chrome
   - google-japanese-ime
