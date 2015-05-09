@@ -50,6 +50,7 @@ brew_pkg_with_opts:
 
 cask_packages:
   - alfred
+  - android-studio
   - bettertouchtool
   - boot2docker
   - clipmenu
@@ -62,6 +63,7 @@ cask_packages:
   - google-japanese-ime
   - inkscape
   - iterm2
+  - java
   - mendeley-desktop
   - pgadmin3
   - qlstephen
