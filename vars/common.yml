@@ -14,56 +14,47 @@ pacman_install:
   - xclip
   - zsh
 
-# role: brew
-brew_packages:
-  - name: aspell
-  - name: cask                  # TODO: dependent to brewed emacs
-  - name: gist
-  - name: hub
-  - name: imagemagick
-  - name: python3
-  - name: rbenv
-  - name: rbenv-default-gems
-  - name: ruby-build
-  - name: shellcheck
-  - name: ssh-copy-id
-  - name: the_silver_searcher
-  - name: tig
-  - name: zeromq
-  - name: zsh
+# role: osxc.common-env
+affected_users: []        # workaround to avoid creating ~/.common-env
 
-homebrew_taps:
+# role: osxc.packages
+brew_taps:
   - homebrew/python
   - motemen/ghq
 
-homebrew_packages:
-  - name: coreutils
-  - name: git
-  - name: mysql
-  - name: postgresql
+brew_packages:
+  - aspell
+  - coreutils
+  - ghq
+  - gist
+  - git
+  - go
+  - hub
+  - imagemagick
+  - mysql
+  - postgresql
+  - python3
+  - rbenv
+  - rbenv-default-gems
+  - ruby-build
+  - shellcheck
+  - ssh-copy-id
+  - the_silver_searcher
+  - tig
+  - zeromq
+  - zsh
 
-  - name: emacs
-    install_options:
-      - cocoa
+brew_pkg_with_opts:
+  - { pkg: matplotlib, opts: with-python3 }
 
-  - name: go
-    install_options:
-      - with-cc-common
-
-  # homebrew/python
-  - name: matplotlib
-    install_options:
-      - with-python3            # TODO: dependent to brewed python3
-
-  # motemen/ghq
-  - name: ghq
-
-homebrew_cask_packages:
+cask_packages:
   - alfred
   - bettertouchtool
+  - boot2docker
   - clipmenu
   - dash
   - dropbox
+  - emacs
   - evernote
   - gimp
   - google-chrome
