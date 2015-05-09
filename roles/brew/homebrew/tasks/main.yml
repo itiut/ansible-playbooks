@@ -1,9 +1,0 @@
----
-- name: Install Homebrew
-  shell: ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" creates=/usr/local/bin/brew
-
-- name: Tap Homebrew Cask
-  homebrew_tap: tap=caskroom/cask
-
-- name: Install Homebrew Cask
-  homebrew: name=brew-cask

@@ -3,13 +3,11 @@
   connection: local
 
   vars_files:
-    - [ "vars/{{ ansible_os_family }}.yml", vars/os_defaults.yml ]
     - vars/common.yml
 
   roles:
     - { role: itiut.pacman, tags: ['pacman'], when: ansible_pkg_mgr == 'pacman', sudo: true }
-    - { role: apt,        tags: ['apt'],        when: ansible_os_family == 'Debian' }
-    - { role: brew,       tags: ['brew'] }
+    - { role: osxc.packages, tags: ['osxc'], when: ansible_os_family == 'Darwin' }
     - { role: repository, tags: ['repository'] }
     - { role: dotfile,    tags: ['dotfile'] }
     - { role: loginshell, tags: ['loginshell'] }

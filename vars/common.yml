@@ -14,74 +14,47 @@ pacman_install:
   - xclip
   - zsh
 
-# role: apt
-apt_packages:
-  - emacs24
-  - guake
-  - indicator-multiload
-  - vim
-  - virtualbox
-  - xclip
+# role: osxc.common-env
+affected_users: []        # workaround to avoid creating ~/.common-env
 
-  # TODO
-  # - emacs-mozc
-  # - fcitx
-  # - fcitx-mozc
-  # - icedtea-netx
-  # - nautilus-dropbox
-  # - openjdk-8-jdk
-  # - zeal
-
-# role: brew
-brew_packages:
-  - name: aspell
-  - name: cask                  # TODO: dependent to brewed emacs
-  - name: gist
-  - name: hub
-  - name: imagemagick
-  - name: python3
-  - name: rbenv
-  - name: rbenv-default-gems
-  - name: ruby-build
-  - name: shellcheck
-  - name: ssh-copy-id
-  - name: the_silver_searcher
-  - name: tig
-  - name: zeromq
-  - name: zsh
-
-homebrew_taps:
+# role: osxc.packages
+brew_taps:
   - homebrew/python
   - motemen/ghq
 
-homebrew_packages:
-  - name: coreutils
-  - name: git
-  - name: mysql
-  - name: postgresql
+brew_packages:
+  - aspell
+  - coreutils
+  - ghq
+  - gist
+  - git
+  - go
+  - hub
+  - imagemagick
+  - mysql
+  - postgresql
+  - python3
+  - rbenv
+  - rbenv-default-gems
+  - ruby-build
+  - shellcheck
+  - ssh-copy-id
+  - the_silver_searcher
+  - tig
+  - zeromq
+  - zsh
 
-  - name: emacs
-    install_options:
-      - cocoa
+brew_pkg_with_opts:
+  - { pkg: matplotlib, opts: with-python3 }
 
-  - name: go
-    install_options:
-      - with-cc-common
-
-  # homebrew/python
-  - name: matplotlib
-    install_options:
-      - with-python3            # TODO: dependent to brewed python3
-
-  # motemen/ghq
-  - name: ghq
-
-homebrew_cask_packages:
+cask_packages:
   - alfred
   - bettertouchtool
+  - boot2docker
   - clipmenu
   - dash
   - dropbox
+  - emacs
   - evernote
   - gimp
   - google-chrome
@@ -95,7 +68,6 @@ homebrew_cask_packages:
   - slack
   - virtualbox
 
-
 # role: repository
 repository_directory: '{{ home }}/src'
 
@@ -105,7 +77,6 @@ repositories:
   - path: github.com/zsh-users/antigen
   - path: github.com/itiut/dotfiles
   - { path: bitbucket.org/itiut/fonts, scheme: 'ssh://git@' }
-
 
 # role: dotfile
 dotfiles_directory: '{{ repository_directory }}/github.com/itiut/dotfiles/linked'
@@ -151,14 +122,7 @@ dotfiles:
     target_directory: '{{ repository_directory }}/bitbucket.org/itiut'
     link: .fonts
 
-
 # role: loginshell
 zsh_paths:
-  - '{{ home }}/.linuxbrew/bin/zsh'
   - /usr/local/bin/zsh
   - /bin/zsh
-
-
-local_dir: "{{ home }}/local"
-bin_dir: "{{ local_dir }}/bin"
-src_dir: "{{ local_dir }}/src"

@@ -1,4 +1,0 @@
----
-dependencies:
-  - { role: brew/homebrew,  when: ansible_os_family == 'Darwin' }
-  - { role: brew/linuxbrew, when: ansible_os_family != 'Darwin' }

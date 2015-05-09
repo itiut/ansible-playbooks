@@ -6,7 +6,6 @@ Ansible playbooks for my development enviroments
 Target Environments
 ----
 * OS X Yosemite 10.10
-* Ubuntu 14.04
 * Antergos
 
 
@@ -18,12 +17,6 @@ Requirements
 ### OS X
 ```console
 $ curl https://bootstrap.pypa.io/get-pip.py | sudo python
-$ sudo pip install ansible
-```
-
-### Ubuntu
-```console
-$ sudo apt-get install git python-dev python-pip
 $ sudo pip install ansible
 ```
 
