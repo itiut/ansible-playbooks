@@ -4,6 +4,5 @@ os:
 before_install:
   - brew update
   - brew install python ansible
-  - ansible-galaxy install -r requirements.yml
 script:
-  - ansible-playbook site.yml -vv
+  - make all
