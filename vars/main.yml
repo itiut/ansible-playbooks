@@ -1,6 +1,6 @@
 ---
-user: '{{ ansible_env.USER }}'
-home: '{{ ansible_env.HOME }}'
+user: "{{ ansible_user_id }}"
+home: "{{ ansible_user_dir }}"
 
 # role: itiut.pacman
 pacman_install:
