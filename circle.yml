@@ -7,4 +7,4 @@ dependencies:
     - docker build -t itiut/ansible-playbooks-test ./tests
 test:
   override:
-    - docker run -t -v $(pwd):/ansible-playbooks -w /ansible-playbooks itiut/ansible-playbooks-test make all
+    - docker run -t -v $(pwd):/ansible-playbooks -w /ansible-playbooks itiut/ansible-playbooks-test ./tests/test.sh
