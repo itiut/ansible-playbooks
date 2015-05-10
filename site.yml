@@ -8,6 +8,5 @@
   roles:
     - { role: itiut.pacman, tags: ['pacman'], when: ansible_pkg_mgr == 'pacman', sudo: true }
     - { role: osxc.packages, tags: ['brew'], when: ansible_os_family == 'Darwin' }
-    - { role: repository, tags: ['repository'] }
-    - { role: dotfile,    tags: ['dotfile'] }
+    - { role: dotfiles, tags: ['dotfiles'] }
     - { role: loginshell, tags: ['loginshell'] }

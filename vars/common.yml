@@ -75,54 +75,44 @@ cask_packages:
   - slack
   - virtualbox
 
-# role: repository
-repository_directory: '{{ home }}/src'
+# role: dotfiles
+dotfiles_repos_root: "{{ home }}/src"
+dotfiles_home: "{{ home }}"
 
-repositories:
-  - path: github.com/mbadolato/iTerm2-Color-Schemes
-  - path: github.com/seebi/dircolors-solarized
-  - path: github.com/zsh-users/antigen
-  - path: github.com/itiut/dotfiles
-
-# role: dotfile
-dotfiles_directory: '{{ repository_directory }}/github.com/itiut/dotfiles/linked'
-private_dotfiles_directory: '{{ home }}/Dropbox/.share'
-
-dotfiles_parent_directories:
-  - .config/autostart
-  - .config/fontconfig
-  - .rbenv
-  - .zsh.d
-
-dotfiles:
-  - name: .Xmodmap
-  - name: .aspell.conf
-  - name: .config/autostart/guake.desktop
-  - name: .config/fontconfig/fonts.conf
-  - name: .emacs.d
-  - name: .gemrc
-  - name: .gitconfig
-  - name: .gitignore_global
-  - name: .my.cnf
-  - name: .pryrc
-  - name: .rbenv/default-gems
-  - name: .rspec
-  - name: .rubocop.yml
-  - name: .tigrc
-  - name: .vimrc
-  - name: .zsh.d/itiut.zsh-theme
-  - name: .zshenv
-  - name: .zshrc
-  - name: .zshrc.darwin
-  - name: .zshrc.linux
-
-  - { name: .gitconfig.local, target_directory: '{{ private_dotfiles_directory }}' }
-  - { name: .ssh/config,      target_directory: '{{ private_dotfiles_directory }}' }
-  - { name: .zshenv.local,    target_directory: '{{ private_dotfiles_directory }}' }
-
-  - name: dircolors.ansi-universal
-    target_directory: '{{ repository_directory }}/github.com/seebi/dircolors-solarized'
-    link: .dircolors
+dotfiles_dotfiles:
+  - repo: github.com/zsh-users/antigen
+    dotfiles: []
+  - repo: github.com/seebi/dircolors-solarized
+    dotfiles:
+      - { file: dircolors.ansi-universal, link: .dircolors }
+  - repo: github.com/itiut/dotfiles
+    dir: linked
+    dotfiles:
+      - .Xmodmap
+      - .aspell.conf
+      - .config/autostart/guake.desktop
+      - .config/fontconfig/fonts.conf
+      - .emacs.d
+      - .gemrc
+      - .gitconfig
+      - .gitignore_global
+      - .my.cnf
+      - .pryrc
+      - .rbenv/default-gems
+      - .rspec
+      - .rubocop.yml
+      - .tigrc
+      - .vimrc
+      - .zsh.d/itiut.zsh-theme
+      - .zshenv
+      - .zshrc
+      - .zshrc.darwin
+      - .zshrc.linux
+  - dir: "{{ home }}/Dropbox/.share"
+    dotfiles:
+      - .gitconfig.local
+      - .ssh/config
+      - .zshenv.local
 
 # role: loginshell
 zsh_paths:
