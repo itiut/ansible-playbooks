@@ -32,5 +32,6 @@
     src="{{ item.ansible_facts.dotfiles_link_src }}"
     dest="{{ item.ansible_facts.dotfiles_link_dest }}"
     state=link
+    force=yes
   with_items: result.results
   when: result.results
