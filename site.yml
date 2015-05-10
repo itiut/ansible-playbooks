@@ -3,7 +3,7 @@
   connection: local
 
   vars_files:
-    - vars/common.yml
+    - vars/main.yml
 
   roles:
     - { role: itiut.pacman, tags: ['pacman'], when: ansible_pkg_mgr == 'pacman', sudo: true }
