@@ -47,8 +47,8 @@ brew_packages:
   - zsh
 
 brew_pkg_with_opts:
-  - { pkg: emcas, opt: with-cocoa }
-  - { pkg: cask, opt: '' }      # must be installed after emacs
+  - { pkg: emacs, opts: with-cocoa }
+  - { pkg: cask, opts: '' }      # must be installed after emacs
   - { pkg: matplotlib, opts: with-python3 }
 
 cask_packages:
