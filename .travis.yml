@@ -5,4 +5,4 @@ before_install:
   - brew update
   - brew install python ansible
 script:
-  - make all
+  - travis_wait 60 ./tests/test.sh
