@@ -28,10 +28,12 @@ brew_packages:
   - aspell
   - coreutils
   - direnv
+  - doxygen
   - ghq
   - gist
   - git
   - go
+  - graphviz
   - hub
   - imagemagick
   - mysql
