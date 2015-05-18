@@ -27,6 +27,7 @@ brew_taps:
 brew_packages:
   - aspell
   - coreutils
+  - direnv
   - ghq
   - gist
   - git
