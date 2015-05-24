@@ -36,6 +36,7 @@ brew_packages:
   - graphviz
   - hub
   - imagemagick
+  - jq
   - mysql
   - postgresql
   - python3
