@@ -74,6 +74,7 @@ cask_packages:
   - inkscape
   - iterm2
   - java
+  - kindle
   - mendeley-desktop
   - pgadmin3
   - qlstephen
