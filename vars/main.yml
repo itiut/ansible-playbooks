@@ -28,6 +28,8 @@ brew_packages:
   - aspell
   - coreutils
   - direnv
+  - docker
+  - docker-machine
   - doxygen
   - ghq
   - gist
@@ -60,7 +62,6 @@ cask_packages:
   - alfred
   - android-studio
   - bettertouchtool
-  - boot2docker
   - clipmenu
   - dash
   - dropbox
