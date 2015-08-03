@@ -26,6 +26,7 @@ brew_taps:
 
 brew_packages:
   - aspell
+  - awscli
   - coreutils
   - direnv
   - docker
