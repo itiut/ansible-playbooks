@@ -41,6 +41,7 @@ brew_packages:
   - imagemagick
   - jq
   - mysql
+  - node
   - postgresql
   - python3
   - rbenv
