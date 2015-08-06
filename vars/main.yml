@@ -51,6 +51,7 @@ brew_packages:
   - ruby-build
   - shellcheck
   - ssh-copy-id
+  - terraform
   - the_silver_searcher
   - tig
   - zeromq
