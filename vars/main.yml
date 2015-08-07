@@ -84,6 +84,7 @@ cask_packages:
   - mendeley-desktop
   - pgadmin3
   - qlstephen
+  - sequel-pro
   - skitch
   - slack
   - virtualbox
