@@ -77,6 +77,7 @@ cask_packages:
   - gimp
   - google-chrome
   - google-japanese-ime
+  - gyazo
   - inkscape
   - iterm2
   - java
