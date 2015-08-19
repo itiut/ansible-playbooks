@@ -35,6 +35,7 @@ brew_packages:
   - docker-machine
   - doxygen
   - ghq
+  - gibo
   - gist
   - git
   - go
