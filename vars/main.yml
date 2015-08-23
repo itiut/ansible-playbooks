@@ -28,6 +28,7 @@ brew_packages:
   - aspell
   - aws-elasticbeanstalk
   - awscli
+  - carthage
   - coreutils
   - direnv
   - docker
