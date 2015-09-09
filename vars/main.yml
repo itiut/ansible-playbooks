@@ -91,6 +91,7 @@ cask_packages:
   - skitch
   - slack
   - virtualbox
+  - wercker-cli
 
 # role: dotfiles
 dotfiles_repos_root: "{{ home }}/src"
