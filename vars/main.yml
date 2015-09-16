@@ -108,6 +108,7 @@ dotfiles_dotfiles:
     dotfiles:
       - .Xmodmap
       - .aspell.conf
+      - .atom
       - .config/autostart/guake.desktop
       - .config/fontconfig/fonts.conf
       - .emacs.d
