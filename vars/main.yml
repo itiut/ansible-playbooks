@@ -93,6 +93,13 @@ cask_packages:
   - virtualbox
   - wercker-cli
 
+# role: itiut.pip-packages
+pip_packages_executable: pip3
+pip_packages_install:
+  - 'ipython[notebook]'
+  - flake8
+  - pandas
+
 # role: dotfiles
 dotfiles_repos_root: "{{ home }}/src"
 dotfiles_home: "{{ home }}"

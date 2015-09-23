@@ -1,3 +1,4 @@
 - src: itiut.pacman
+- src: itiut.pip-packages
 - src: osxc.packages
   version: master
