@@ -64,6 +64,7 @@ brew_pkg_with_opts:
   - { pkg: cask, opts: '' }      # must be installed after emacs
   - { pkg: global, opts: 'with-exuberant-ctags,with-pygments' }
   - { pkg: matplotlib, opts: with-python3 }
+  - { pkg: scipy, opts: with-python3 }
 
 cask_packages:
   - alfred
