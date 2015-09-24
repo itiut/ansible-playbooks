@@ -79,6 +79,7 @@ cask_packages:
   - font-source-code-pro-for-powerline
   - gimp
   - google-chrome
+  - google-drive
   - google-japanese-ime
   - gyazo
   - inkscape
