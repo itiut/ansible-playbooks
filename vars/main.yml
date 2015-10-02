@@ -41,6 +41,7 @@ brew_packages:
   - git
   - go
   - graphviz
+  - heroku-toolbelt
   - hub
   - imagemagick
   - jq
