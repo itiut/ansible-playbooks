@@ -87,6 +87,7 @@ cask_packages:
   - iterm2
   - java
   - kindle
+  - licecap
   - mendeley-desktop
   - pgadmin3
   - qlstephen
