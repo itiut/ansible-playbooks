@@ -127,6 +127,7 @@ dotfiles_dotfiles:
       - .gemrc
       - .gitconfig
       - .gitignore_global
+      - .jsbeautifyrc
       - .my.cnf
       - .pryrc
       - .rbenv/default-gems
