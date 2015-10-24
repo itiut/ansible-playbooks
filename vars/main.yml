@@ -29,6 +29,7 @@ brew_packages:
   - aws-elasticbeanstalk
   - awscli
   - carthage
+  - colordiff
   - coreutils
   - direnv
   - docker
