@@ -28,7 +28,8 @@ brew_packages:
   - aspell
   - aws-elasticbeanstalk
   - awscli
-  - carthage
+  # Temporary avoid an instllation error on Travis CI
+  # - carthage
   - colordiff
   - coreutils
   - direnv
