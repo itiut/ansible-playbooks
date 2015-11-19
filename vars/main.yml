@@ -21,6 +21,7 @@ affected_users: []        # workaround to avoid creating ~/.common-env
 # role: osxc.packages
 brew_taps:
   - caskroom/fonts
+  - homebrew/php
   - homebrew/python
   - motemen/ghq
 
@@ -49,6 +50,7 @@ brew_packages:
   - jq
   - mysql
   - node
+  - php56
   - postgresql
   - python3
   - rbenv
