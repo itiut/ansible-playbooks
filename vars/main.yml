@@ -125,6 +125,7 @@ dotfiles_dotfiles:
       - .atom
       - .config/autostart/guake.desktop
       - .config/fontconfig/fonts.conf
+      - .editorconfig
       - .emacs.d
       - .gemrc
       - .gitconfig
