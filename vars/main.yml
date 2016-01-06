@@ -75,6 +75,7 @@ brew_pkg_with_opts:
 cask_packages:
   - alfred
   - android-studio
+  - atom
   - bettertouchtool
   - clipy
   - dropbox
@@ -93,6 +94,7 @@ cask_packages:
   - karabiner
   - kindle
   - licecap
+  - macs-fan-control
   - mendeley-desktop
   - pgadmin3
   - qlstephen
