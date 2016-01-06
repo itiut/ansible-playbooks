@@ -81,7 +81,7 @@ cask_packages:
   - evernote
   - font-noto-sans-japanese
   - font-ricty-diminished
-  - font-source-code-pro-for-powerline
+  - font-source-code-pro
   - gimp
   - google-chrome
   - google-drive
