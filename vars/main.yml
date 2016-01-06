@@ -76,7 +76,7 @@ cask_packages:
   - alfred
   - android-studio
   - bettertouchtool
-  - clipmenu
+  - clipy
   - dropbox
   - evernote
   - font-noto-sans-japanese
