@@ -78,6 +78,7 @@ cask_packages:
   - atom
   - bettertouchtool
   - clipy
+  - cocoapods
   - dropbox
   - evernote
   - font-noto-sans-japanese
