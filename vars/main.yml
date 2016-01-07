@@ -76,7 +76,6 @@ cask_packages:
   - alfred
   - android-studio
   - atom
-  - bettertouchtool
   - clipy
   - cocoapods
   - dropbox
@@ -96,12 +95,14 @@ cask_packages:
   - kindle
   - licecap
   - macs-fan-control
+  - magicprefs
   - mendeley-desktop
   - pgadmin3
   - qlstephen
   - sequel-pro
   - skitch
   - slack
+  - spectacle
   - virtualbox
   - wercker-cli
 
