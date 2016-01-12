@@ -76,6 +76,7 @@ cask_packages:
   - alfred
   - android-studio
   - atom
+  - betterzipql
   - clipy
   - cocoapods
   - dropbox
@@ -98,7 +99,11 @@ cask_packages:
   - magicprefs
   - mendeley-desktop
   - pgadmin3
+  - qlcolorcode
+  - qlmarkdown
   - qlstephen
+  - quicklook-csv
+  - quicklook-json
   - sequel-pro
   - skitch
   - slack
