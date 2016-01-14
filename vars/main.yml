@@ -108,6 +108,7 @@ cask_packages:
   - skitch
   - slack
   - spectacle
+  - vagrant
   - virtualbox
   - wercker-cli
 
