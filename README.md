@@ -5,20 +5,22 @@ Ansible playbooks for my development enviroments
 
 Target Environments
 ----
-* OS X Yosemite 10.10 [![Build Status](https://travis-ci.org/itiut/ansible-playbooks.svg?branch=master)](https://travis-ci.org/itiut/ansible-playbooks)
+* OS X El Capitan 10.11 [![Build Status](https://travis-ci.org/itiut/ansible-playbooks.svg?branch=master)](https://travis-ci.org/itiut/ansible-playbooks)
 * Antergos [![Circle CI](https://circleci.com/gh/itiut/ansible-playbooks.svg?style=svg&circle-token=9c4cfadd2f81035f00785fea3f4216d098380aa4)](https://circleci.com/gh/itiut/ansible-playbooks)
 
 
 Requirements
 ----
 * git
+* homebrew
 * ansible 1.9
 
 ### OS X
 ```console
-$ curl https://bootstrap.pypa.io/get-pip.py | sudo python
-$ sudo pip install ansible
+$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+$ brew install ansible
 ```
+**NOTE**: Commands to install homebrew may change. Check http://brew.sh/.
 
 ### Antergos
 ```console
