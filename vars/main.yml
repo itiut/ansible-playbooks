@@ -26,11 +26,7 @@ brew_taps:
   - motemen/ghq
 
 brew_packages:
-  - aspell
-  - aws-elasticbeanstalk
   - awscli
-  # Temporary avoid an instllation error on Travis CI
-  # - carthage
   - colordiff
   - coreutils
   - direnv
@@ -50,65 +46,63 @@ brew_packages:
   - jq
   - mysql
   - node
-  - php56
-  - postgresql
-  - python3
-  - rbenv
-  - rbenv-default-gems
-  - ruby-build
+#  - php56
+#  - python3
+#  - rbenv
+#  - rbenv-default-gems
+#  - ruby-build
   - shellcheck
   - ssh-copy-id
   - terraform
   - the_silver_searcher
-  - tidy-html5
   - tig
-  - zeromq
   - zsh
 
-brew_pkg_with_opts:
-  - { pkg: emacs, opts: with-cocoa }
-  - { pkg: cask, opts: '' }      # must be installed after emacs
-  - { pkg: global, opts: 'with-exuberant-ctags,with-pygments' }
-  - { pkg: matplotlib, opts: with-python3 }
-  - { pkg: scipy, opts: with-python3 }
+brew_pkg_with_opts: []
+#  - { pkg: emacs, opts: with-cocoa }
+#  - { pkg: cask, opts: '' }      # must be installed after emacs
+#  - { pkg: global, opts: 'with-exuberant-ctags,with-pygments' }
+#  - { pkg: matplotlib, opts: with-python3 }
+#  - { pkg: scipy, opts: with-python3 }
 
 cask_packages:
   - alfred
-  - android-studio
-  - bettertouchtool
-  - clipmenu
+  - atom
+  - betterzipql
+  - clipy
+  - cocoapods
   - dropbox
   - evernote
   - font-noto-sans-japanese
   - font-ricty-diminished
-  - font-source-code-pro-for-powerline
-  - gimp
+  - font-source-code-pro
   - google-chrome
   - google-drive
   - google-japanese-ime
-  - gyazo
-  - inkscape
   - iterm2
-  - java
   - karabiner
   - kindle
-  - licecap
-  - mendeley-desktop
-  - pgadmin3
+  - macs-fan-control
+  - magicprefs
+  - qlcolorcode
+  - qlimagesize
+  - qlmarkdown
   - qlstephen
+  - quicklook-csv
+  - quicklook-json
   - sequel-pro
-  - skitch
   - slack
+  - spectacle
+  - vagrant
   - virtualbox
-  - wercker-cli
 
 # role: itiut.pip-packages
-pip_packages_executable: pip3
-pip_packages_install:
-  - 'ipython[notebook]'
-  - flake8
-  - pandas
-  - seaborn
+#pip_packages_executable: pip3
+#pip_packages_install:
+#  - 'ipython[notebook]'
+#  - flake8
+#  - pandas
+#  - seaborn
 
 # role: dotfiles
 dotfiles_repos_root: "{{ home }}/src"
