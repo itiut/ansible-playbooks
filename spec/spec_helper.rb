@@ -14,3 +14,7 @@ end
 def cask_packages_dir
   '/opt/homebrew-cask/Caskroom/'
 end
+
+def expand_home(path)
+  path.gsub(/{{ home }}/, File.expand_path('~'))
+end
