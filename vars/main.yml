@@ -2,19 +2,6 @@
 user: "{{ ansible_user_id }}"
 home: "{{ ansible_user_dir }}"
 
-# role: itiut.pacman
-pacman_install:
-  - aspell-en
-  - dropbox
-  - emacs
-  - guake
-  - hub
-  - the_silver_searcher
-  - tig
-  - vim
-  - xclip
-  - zsh
-
 # role: osxc.common-env
 affected_users: []        # workaround to avoid creating ~/.common-env
 
@@ -102,7 +89,6 @@ cask_packages:
 #  - 'ipython[notebook]'
 #  - flake8
 #  - pandas
-#  - seaborn
 
 # role: repositories
 repositories_root: "{{ home }}/src"
@@ -147,8 +133,3 @@ dotfiles_dirs:
       - .gitconfig.local
       - .ssh/config
       - .zshenv.local
-
-# role: loginshell
-zsh_paths:
-  - /usr/local/bin/zsh
-  - /bin/zsh

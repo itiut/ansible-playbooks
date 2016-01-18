@@ -6,9 +6,8 @@
     - vars/main.yml
 
   roles:
-#    - { role: itiut.pacman, tags: ['pacman'], when: ansible_pkg_mgr == 'pacman', sudo: true }
-    - { role: osxc.packages, tags: ['brew'], when: ansible_os_family == 'Darwin' }
-    - { role: itiut.pip-packages, tags: ['pip'], when: ansible_os_family == 'Darwin' }
+    - { role: osxc.packages, tags: ['brew'] }
+    - { role: itiut.pip-packages, tags: ['pip'] }
     - { role: repositories, tags: ['repositories'] }
     - { role: dotfiles, tags: ['dotfiles'] }
     - { role: loginshell, tags: ['loginshell'] }
