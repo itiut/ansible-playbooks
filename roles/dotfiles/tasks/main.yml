@@ -1,37 +1,18 @@
 ---
-- name: Clone dotfiles repositories
-  git:
-    repo="https://{{ item.repo }}"
-    dest="{{ dotfiles_repos_root }}/{{ item.repo }}"
-  with_items: dotfiles_dotfiles
-  when: item.repo is defined
-
-- name: Set source and destination of dotfiles links
-  set_fact:
-    dotfiles_link_src: "\
-    {{ [dotfiles_repos_root, item.0.repo, ''] | join('/') if item.0.repo is defined else '' }}\
-    {{ item.0.dir + '/' if item.0.dir is defined else '' }}\
-    {{ item.1.file | default(item.1) }}"
-    dotfiles_link_dest: "{{ dotfiles_home }}/{{ item.1.link | default(item.1) }}"
-  with_subelements:
-    - dotfiles_dotfiles
-    - dotfiles
-  when: item.1
-  register: result
-
-- name: Create directories into which dotfiles are linked
+- name: Create directories in which symlinks will be located
   file:
-    path="{{ item.ansible_facts.dotfiles_link_dest | dirname }}"
+    path="{{ home }}/{{ item.1 | dirname }}"
     state=directory
-    force=yes
-  with_items: result.results
-  when: item.item.1 is string and item.item.1 | search("/")
+  with_subelements:
+    - dotfiles_dirs
+    - dotfiles
+  when: item.1 is string and item.1 | search("/")
 
-- name: Link dotfiles into home directory
+- name: Create symlinks to dotfiles
   file:
-    src="{{ item.ansible_facts.dotfiles_link_src }}"
-    dest="{{ item.ansible_facts.dotfiles_link_dest }}"
+    src="{{ item.0.dir }}/{{ item.1.file | default(item.1) }}"
+    dest="{{ home }}/{{ item.1.link | default(item.1) }}"
     state=link
-    force=yes
-  with_items: result.results
-  when: result.results
+  with_subelements:
+    - dotfiles_dirs
+    - dotfiles

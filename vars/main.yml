@@ -104,18 +104,19 @@ cask_packages:
 #  - pandas
 #  - seaborn
 
-# role: dotfiles
-dotfiles_repos_root: "{{ home }}/src"
-dotfiles_home: "{{ home }}"
+# role: repositories
+repositories_root: "{{ home }}/src"
+repositories_repos:
+  - github.com/zsh-users/antigen
+  - github.com/seebi/dircolors-solarized
+  - github.com/itiut/dotfiles
 
-dotfiles_dotfiles:
-  - repo: github.com/zsh-users/antigen
-    dotfiles: []
-  - repo: github.com/seebi/dircolors-solarized
+# role: dotfiles
+dotfiles_dirs:
+  - dir: "{{ home }}/src/github.com/seebi/dircolors-solarized"
     dotfiles:
       - { file: dircolors.ansi-universal, link: .dircolors }
-  - repo: github.com/itiut/dotfiles
-    dir: linked
+  - dir: "{{ home }}/src/github.com/itiut/dotfiles/linked"
     dotfiles:
       - .Xmodmap
       - .aspell.conf
