@@ -1,8 +1,11 @@
 language: objective-c
 os:
   - osx
-before_install:
+install:
+  - bundle install
   - brew update
-  - brew install python ansible
+  - brew install ansible
+  - ansible-galaxy install -r requirements.yml
+  - ansible-playbook site.yml -v
 script:
-  - travis_wait 60 ./tests/test.sh
+  - bundle exec rake spec
