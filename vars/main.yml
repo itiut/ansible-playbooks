@@ -134,6 +134,7 @@ dotfiles_dirs:
       - .rbenv/default-gems
       - .rspec
       - .rubocop.yml
+      - .ruby-version
       - .tigrc
       - .vimrc
       - .zsh.d/itiut.zsh-theme
