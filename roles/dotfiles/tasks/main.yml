@@ -13,6 +13,7 @@
     src="{{ item.0.dir }}/{{ item.1.file | default(item.1) }}"
     dest="{{ home }}/{{ item.1.link | default(item.1) }}"
     state=link
+    force=yes
   with_subelements:
     - dotfiles_dirs
     - dotfiles
