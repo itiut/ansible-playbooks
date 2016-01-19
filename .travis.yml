@@ -15,4 +15,4 @@ install:
   - ansible-galaxy install -r requirements.yml
   - ansible-playbook site.yml -v
 script:
-  - bundle exec rake spec
+  - rake spec
