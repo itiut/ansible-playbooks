@@ -1,11 +1,11 @@
-ansible-playbooks
+osx-playbooks
 ====
-Ansible playbooks for my development enviroments
+Ansible playbooks for my OS X enviroments
 
 
-Target Environments
+Target Environment
 ----
-* OS X El Capitan 10.11 [![Build Status](https://travis-ci.org/itiut/ansible-playbooks.svg?branch=master)](https://travis-ci.org/itiut/ansible-playbooks)
+* OS X El Capitan 10.11 [![Build Status](https://travis-ci.org/itiut/osx-playbooks.svg?branch=master)](https://travis-ci.org/itiut/osx-playbooks)
 
 Requirements
 ----
@@ -17,7 +17,7 @@ Requirements
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 $ brew install ansible
 ```
-**NOTE**: Commands to install homebrew may change. Check http://brew.sh/.
+**NOTE**: Commands to install homebrew may change. See http://brew.sh/.
 
 
 Installation
@@ -25,8 +25,8 @@ Installation
 ```console
 $ mkdir -p ~/src/github.com/itiut
 $ cd $_
-$ git clone https://github.com/itiut/ansible-playbooks
-$ cd ansible-playbooks
+$ git clone https://github.com/itiut/osx-playbooks
+$ cd osx-playbooks
 $ ansible-galaxy install -r requirements.yml
 ```
 
