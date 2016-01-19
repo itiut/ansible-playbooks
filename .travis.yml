@@ -1,6 +1,13 @@
 language: objective-c
 os:
   - osx
+before_install:
+  - mkdir -p
+      ~/Dropbox/.share/.ssh
+  - touch
+      ~/Dropbox/.share/.gitconfig.local
+      ~/Dropbox/.share/.ssh/config
+      ~/Dropbox/.share/.zshenv.local
 install:
   - bundle install
   - brew update
