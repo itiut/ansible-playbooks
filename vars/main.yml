@@ -94,7 +94,7 @@ cask_packages:
 # role: repositories
 repositories_root: "{{ home }}/src"
 repositories_repos:
-  - github.com/zsh-users/antigen
+  - github.com/b4b4r07/zplug
   - github.com/seebi/dircolors-solarized
   - github.com/itiut/dotfiles
 
