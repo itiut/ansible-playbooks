@@ -78,6 +78,7 @@ cask_packages:
   - quicklook-csv
   - quicklook-json
   - sequel-pro
+  - skitch
   - slack
   - spectacle
   - vagrant
