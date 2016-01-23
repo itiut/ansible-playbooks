@@ -36,9 +36,8 @@ brew_packages:
   - node
 #  - php56
 #  - python3
-#  - rbenv
-#  - rbenv-default-gems
-#  - ruby-build
+  - rbenv
+  - ruby-build
   - shellcheck
   - ssh-copy-id
   - terminal-notifier
@@ -120,7 +119,6 @@ dotfiles_dirs:
       - .jsbeautifyrc
       - .my.cnf
       - .pryrc
-      - .rbenv/default-gems
       - .rspec
       - .rubocop.yml
       - .ruby-version
