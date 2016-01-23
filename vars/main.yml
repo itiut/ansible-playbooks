@@ -25,6 +25,7 @@ brew_packages:
   - gibo
   - gist
   - git
+  - gnu-sed
   - go
   - graphviz
   - heroku-toolbelt
