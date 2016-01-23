@@ -40,6 +40,7 @@ brew_packages:
 #  - ruby-build
   - shellcheck
   - ssh-copy-id
+  - terminal-notifier
   - terraform
   - the_silver_searcher
   - tig
