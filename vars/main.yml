@@ -128,8 +128,6 @@ dotfiles_dirs:
       - .zsh.d/itiut.zsh-theme
       - .zshenv
       - .zshrc
-      - .zshrc.darwin
-      - .zshrc.linux
   - dir: "{{ home }}/Dropbox/.share"
     dotfiles:
       - .gitconfig.local
