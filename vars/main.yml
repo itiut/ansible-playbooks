@@ -14,6 +14,7 @@ brew_taps:
 
 brew_packages:
   - awscli
+  - chruby
   - colordiff
   - coreutils
   - direnv
@@ -36,8 +37,7 @@ brew_packages:
   - node
 #  - php56
 #  - python3
-  - rbenv
-  - ruby-build
+  - ruby-install
   - shellcheck
   - ssh-copy-id
   - terminal-notifier
