@@ -65,7 +65,6 @@ cask_packages:
   - font-ricty-diminished
   - font-source-code-pro
   - google-chrome
-  - google-drive
   - google-japanese-ime
   - iterm2
   - karabiner
