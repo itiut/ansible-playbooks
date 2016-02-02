@@ -44,6 +44,7 @@ brew_packages:
   - terraform
   - the_silver_searcher
   - tig
+  - tmux
   - zsh
 
 brew_pkg_with_opts: []
@@ -96,6 +97,7 @@ repositories_root: "{{ home }}/src"
 repositories_repos:
   - github.com/b4b4r07/zplug
   - github.com/seebi/dircolors-solarized
+  - github.com/tmux-plugins/tpm
   - github.com/itiut/dotfiles
 
 # role: dotfiles
@@ -103,6 +105,9 @@ dotfiles_dirs:
   - dir: "{{ home }}/src/github.com/seebi/dircolors-solarized"
     dotfiles:
       - { file: dircolors.ansi-universal, link: .dircolors }
+  - dir: "{{ home }}/src/github.com/tmux-plugins"
+    dotfiles:
+      - { file: tpm, link: .tmux/plugins/tpm }
   - dir: "{{ home }}/src/github.com/itiut/dotfiles/linked"
     dotfiles:
       - .Xmodmap

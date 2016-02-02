@@ -1,12 +1,14 @@
 ---
 - name: Create directories in which symlinks will be located
   file:
-    path="{{ home }}/{{ item.1 | dirname }}"
+    path="{{ home }}/{{ item.1.link | default(item.1) | dirname }}"
     state=directory
   with_subelements:
     - dotfiles_dirs
     - dotfiles
-  when: item.1 is string and item.1 | search("/")
+  when: >
+    item.1 is string and item.1 | search("/")
+    or item.1 is mapping and item.1.link | search("/")
 
 - name: Create symlinks to dotfiles
   file:
