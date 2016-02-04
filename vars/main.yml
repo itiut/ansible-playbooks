@@ -37,6 +37,7 @@ brew_packages:
   - node
 #  - php56
 #  - python3
+  - reattach-to-user-namespace
   - ruby-install
   - shellcheck
   - ssh-copy-id
