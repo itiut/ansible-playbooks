@@ -3,8 +3,10 @@ os:
   - osx
 before_install:
   - mkdir -p
+      ~/Dropbox/.share/.config
       ~/Dropbox/.share/.ssh
   - touch
+      ~/Dropbox/.share/.config/hub
       ~/Dropbox/.share/.gitconfig.local
       ~/Dropbox/.share/.ssh/config
       ~/Dropbox/.share/.zshenv.local
