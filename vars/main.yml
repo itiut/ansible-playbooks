@@ -123,6 +123,7 @@ dotfiles_dirs:
       - .gitconfig
       - .gitignore_global
       - .jsbeautifyrc
+      - .jscsrc
       - .my.cnf
       - .pryrc
       - .rspec
