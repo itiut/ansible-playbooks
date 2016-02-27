@@ -22,6 +22,7 @@ brew_packages:
   - docker-compose
   - docker-machine
   - doxygen
+  - fzf
   - gawk
   - ghq
   - gibo
@@ -36,7 +37,6 @@ brew_packages:
   - jq
   - mysql
   - node
-  - peco
 #  - php56
 #  - python3
   - reattach-to-user-namespace
