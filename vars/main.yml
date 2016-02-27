@@ -36,6 +36,7 @@ brew_packages:
   - jq
   - mysql
   - node
+  - peco
 #  - php56
 #  - python3
   - reattach-to-user-namespace
