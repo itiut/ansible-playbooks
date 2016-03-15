@@ -10,7 +10,6 @@ brew_taps:
   - caskroom/fonts
   - homebrew/php
   - homebrew/python
-  - motemen/ghq
 
 brew_packages:
   - awscli
