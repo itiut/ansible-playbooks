@@ -16,6 +16,7 @@ brew_packages:
   - chruby
   - colordiff
   - coreutils
+  - ctags
   - direnv
   - docker
   - docker-compose
