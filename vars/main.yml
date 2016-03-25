@@ -65,7 +65,7 @@ cask_packages:
   - cocoapods
   - dropbox
   - evernote
-  - font-noto-sans-japanese
+  - font-noto-sans-cjk-jp
   - font-ricty-diminished
   - font-source-code-pro
   - google-chrome
