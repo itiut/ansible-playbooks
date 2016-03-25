@@ -62,7 +62,6 @@ cask_packages:
   - atom
   - betterzipql
   - clipy
-  - cocoapods
   - dropbox
   - evernote
   - font-noto-sans-cjk-jp
