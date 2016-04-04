@@ -48,9 +48,9 @@ brew_packages:
   - the_silver_searcher
   - tig
   - tmux
-  - zsh
 
-brew_pkg_with_opts: []
+brew_pkg_with_opts:
+  - { pkg: zsh, opts: without-etcdir }
 #  - { pkg: emacs, opts: with-cocoa }
 #  - { pkg: cask, opts: '' }      # must be installed after emacs
 #  - { pkg: global, opts: 'with-exuberant-ctags,with-pygments' }
