@@ -4,7 +4,7 @@
     path="{{ home }}/{{ item.1.link | default(item.1) | dirname }}"
     state=directory
   with_subelements:
-    - dotfiles_dirs
+    - "{{ dotfiles_dirs }}"
     - dotfiles
   when: >
     item.1 is string and item.1 | search("/")
@@ -17,5 +17,5 @@
     state=link
     force=yes
   with_subelements:
-    - dotfiles_dirs
+    - "{{ dotfiles_dirs }}"
     - dotfiles

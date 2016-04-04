@@ -3,4 +3,4 @@
   git:
     repo="https://{{ item }}"
     dest="{{ repositories_root }}/{{ item }}"
-  with_items: repositories_repos
+  with_items: "{{ repositories_repos }}"
