@@ -1,0 +1,6 @@
+---
+brew_update_homebrew: yes
+brew_taps:
+  - caskroom/cask
+brew_packages: []
+brew_cask_packages: []

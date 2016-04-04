@@ -6,7 +6,7 @@
     - vars/main.yml
 
   roles:
-    - { role: osxc.packages, tags: ['brew'] }
+    - { role: brew, tags: ['brew'] }
     - { role: itiut.pip-packages, tags: ['pip'] }
     - { role: repositories, tags: ['repositories'] }
     - { role: dotfiles, tags: ['dotfiles'] }

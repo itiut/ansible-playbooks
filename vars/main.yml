@@ -2,11 +2,9 @@
 user: "{{ ansible_user_id }}"
 home: "{{ ansible_user_dir }}"
 
-# role: osxc.common-env
-affected_users: []        # workaround to avoid creating ~/.common-env
-
-# role: osxc.packages
+# role: brew
 brew_taps:
+  - caskroom/cask
   - caskroom/fonts
   - homebrew/php
   - homebrew/python
@@ -48,16 +46,14 @@ brew_packages:
   - the_silver_searcher
   - tig
   - tmux
+  - { name: zsh, install_options: without-etcdir }
+#  - { name: emacs, install_options: with-cocoa }
+#  - { name: cask, install_options: '' }      # must be installed after emacs
+#  - { name: global, install_options: 'with-exuberant-ctags,with-pygments' }
+#  - { name: matplotlib, install_options: with-python3 }
+#  - { name: scipy, install_options: with-python3 }
 
-brew_pkg_with_opts:
-  - { pkg: zsh, opts: without-etcdir }
-#  - { pkg: emacs, opts: with-cocoa }
-#  - { pkg: cask, opts: '' }      # must be installed after emacs
-#  - { pkg: global, opts: 'with-exuberant-ctags,with-pygments' }
-#  - { pkg: matplotlib, opts: with-python3 }
-#  - { pkg: scipy, opts: with-python3 }
-
-cask_packages:
+brew_cask_packages:
   - alfred
   - atom
   - betterzipql

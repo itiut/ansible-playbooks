@@ -14,12 +14,13 @@ vars['brew_taps'].each do |tap|
 end
 
 vars['brew_packages'].each do |package|
+  package = package['name'] if package.is_a?(Hash)
   describe package(package) do
     it { should be_installed }
   end
 end
 
-vars['cask_packages'].each do |package|
+vars['brew_cask_packages'].each do |package|
   describe file(CASK_PACKAGES_DIR + package) do
     it { should be_directory }
   end
