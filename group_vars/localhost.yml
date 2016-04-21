@@ -68,7 +68,9 @@ brew_cask_packages:
   - google-japanese-ime
   - iterm2
   - karabiner
+  - keycastr
   - kindle
+  - licecap
   - macs-fan-control
   - magicprefs
   - qlcolorcode
