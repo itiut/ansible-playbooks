@@ -7,6 +7,7 @@ before_install:
       ~/Dropbox/.share/.ssh
   - touch
       ~/Dropbox/.share/.config/hub
+      ~/Dropbox/.share/.gist
       ~/Dropbox/.share/.gitconfig.local
       ~/Dropbox/.share/.ssh/config
       ~/Dropbox/.share/.zshenv.local

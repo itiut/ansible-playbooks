@@ -136,6 +136,7 @@ dotfiles_dirs:
   - dir: "{{ home }}/Dropbox/.share"
     dotfiles:
       - .config/hub
+      - .gist
       - .gitconfig.local
       - .ssh/config
       - .zshenv.local
