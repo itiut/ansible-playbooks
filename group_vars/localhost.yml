@@ -130,7 +130,6 @@ dotfiles_dirs:
       - .ruby-version
       - .tigrc
       - .vimrc
-      - .zsh.d/itiut.zsh-theme
       - .zshenv
       - .zshrc
   - dir: "{{ home }}/Dropbox/.share"
