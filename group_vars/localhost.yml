@@ -60,7 +60,6 @@ brew_cask_packages:
   - betterzipql
   - clipy
   - dropbox
-  - evernote
   - font-noto-sans-cjk-jp
   - font-ricty-diminished
   - font-source-code-pro
