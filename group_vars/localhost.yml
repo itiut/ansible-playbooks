@@ -47,6 +47,7 @@ brew_packages:
   - tidy-html5
   - tig
   - tmux
+  - zplug
   - { name: zsh, install_options: without-etcdir }
 #  - { name: emacs, install_options: with-cocoa }
 #  - { name: cask, install_options: '' }      # must be installed after emacs
@@ -95,7 +96,6 @@ brew_cask_packages:
 # role: repositories
 repositories_root: "{{ home }}/src"
 repositories_repos:
-  - github.com/b4b4r07/zplug
   - github.com/seebi/dircolors-solarized
   - github.com/tmux-plugins/tpm
   - github.com/itiut/dotfiles
