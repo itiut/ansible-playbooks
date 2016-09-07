@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 BREW_TAPS_DIR = '/usr/local/Library/Taps/'
-CASK_PACKAGES_DIR = '/opt/homebrew-cask/Caskroom/'
+CASK_PACKAGES_DIR = '/usr/local/Caskroom/'
 
 vars = load_variables
 
