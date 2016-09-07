@@ -30,7 +30,7 @@ brew_packages:
   - gnu-sed
   - go
   - graphviz
-  - heroku-toolbelt
+  - heroku
   - hub
   - imagemagick
   - jq
