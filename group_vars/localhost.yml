@@ -20,6 +20,7 @@ brew_packages:
   - docker-compose
   - docker-machine
   - doxygen
+  - findutils
   - fzf
   - gawk
   - ghq
