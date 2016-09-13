@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 BREW_TAPS_DIR = '/usr/local/Library/Taps/'
-CASK_PACKAGES_DIR = '/usr/local/Caskroom/'
 
 vars = load_variables
 
@@ -16,12 +15,12 @@ end
 vars['brew_packages'].each do |package|
   package = package['name'] if package.is_a?(Hash)
   describe package(package) do
-    it { should be_installed }
+    it { should be_installed.by('homebrew') }
   end
 end
 
 vars['brew_cask_packages'].each do |package|
-  describe file(CASK_PACKAGES_DIR + package) do
-    it { should be_directory }
+  describe package(package) do
+    it { should be_installed.by('homebrew_cask') }
   end
 end
