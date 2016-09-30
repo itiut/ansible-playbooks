@@ -134,6 +134,8 @@ dotfiles_dirs:
       - .zshrc
   - dir: "{{ home }}/Dropbox/.share"
     dotfiles:
+      - .aws/config
+      - .aws/credentials
       - .config/hub
       - .gist
       - .gitconfig.local
