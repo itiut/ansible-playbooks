@@ -68,6 +68,7 @@ brew_cask_packages:
   - font-source-code-pro
   - google-chrome
   - google-japanese-ime
+  - hyperswitch
   - iterm2
   - karabiner
   - keycastr
@@ -75,16 +76,20 @@ brew_cask_packages:
   - licecap
   - macs-fan-control
   - magicprefs
+  - pomello
+  - postman
   - qlcolorcode
   - qlimagesize
   - qlmarkdown
   - qlstephen
   - quicklook-csv
   - quicklook-json
+  - rescuetime
   - sequel-pro
   - skitch
   - slack
   - spectacle
+  - toggldesktop
   - vagrant
   - virtualbox
 
