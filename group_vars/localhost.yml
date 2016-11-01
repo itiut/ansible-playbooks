@@ -8,6 +8,7 @@ brew_taps:
   - caskroom/fonts
   - homebrew/php
   - homebrew/python
+  - homebrew/versions
 
 brew_packages:
   - awscli
@@ -35,7 +36,7 @@ brew_packages:
   - imagemagick
   - jq
   - mysql
-  - node
+  - node6-lts
 #  - php56
 #  - python3
   - reattach-to-user-namespace
