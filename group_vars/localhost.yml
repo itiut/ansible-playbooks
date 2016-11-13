@@ -109,9 +109,6 @@ repositories_repos:
 
 # role: dotfiles
 dotfiles_dirs:
-  - dir: "{{ home }}/src/github.com/seebi/dircolors-solarized"
-    dotfiles:
-      - { file: dircolors.256dark, link: .dircolors }
   - dir: "{{ home }}/src/github.com/tmux-plugins"
     dotfiles:
       - { file: tpm, link: .tmux/plugins/tpm }
