@@ -6,7 +6,6 @@ home: "{{ ansible_user_dir }}"
 brew_taps:
   - caskroom/cask
   - caskroom/fonts
-  - homebrew/php
   - homebrew/python
   - homebrew/versions
 
@@ -37,7 +36,6 @@ brew_packages:
   - jq
   - mysql
   - node6-lts
-#  - php56
 #  - python3
   - reattach-to-user-namespace
   - ruby-install
