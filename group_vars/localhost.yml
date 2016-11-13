@@ -33,6 +33,7 @@ brew_packages:
   - heroku
   - hub
   - imagemagick
+  - jo
   - jq
   - mysql
   - node6-lts
@@ -90,6 +91,7 @@ brew_cask_packages:
   - toggldesktop
   - vagrant
   - virtualbox
+  - visual-studio-code
 
 # role: itiut.pip-packages
 #pip_packages_executable: pip3
