@@ -103,14 +103,10 @@ brew_cask_packages:
 # role: repositories
 repositories_root: "{{ home }}/src"
 repositories_repos:
-  - github.com/tmux-plugins/tpm
   - github.com/itiut/dotfiles
 
 # role: dotfiles
 dotfiles_dirs:
-  - dir: "{{ home }}/src/github.com/tmux-plugins"
-    dotfiles:
-      - { file: tpm, link: .tmux/plugins/tpm }
   - dir: "{{ home }}/src/github.com/itiut/dotfiles/linked"
     dotfiles:
       - .Xmodmap
