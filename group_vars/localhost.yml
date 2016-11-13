@@ -103,7 +103,6 @@ brew_cask_packages:
 # role: repositories
 repositories_root: "{{ home }}/src"
 repositories_repos:
-  - github.com/seebi/dircolors-solarized
   - github.com/tmux-plugins/tpm
   - github.com/itiut/dotfiles
 
