@@ -2,10 +2,11 @@ require 'spec_helper'
 
 vars = load_variables
 
-vars['brew_taps'].each do |tap|
-  describe command("brew tap | grep #{tap}") do
-    its(:exit_status) { should eq(0) }
-    its(:stdout) { should eq("#{tap}\n") }
+describe command('brew tap') do
+  its(:exit_status) { should eq(0) }
+
+  vars['brew_taps'].each do |tap|
+    its(:stdout) { should contain(tap) }
   end
 end
 
