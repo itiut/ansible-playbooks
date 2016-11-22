@@ -109,7 +109,6 @@ repositories_repos:
 dotfiles_dirs:
   - dir: "{{ home }}/src/github.com/itiut/dotfiles/linked"
     dotfiles:
-      - .Xmodmap
       - .aspell.conf
       - .atom
       - .config/autostart/guake.desktop
